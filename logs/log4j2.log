@@ -1,0 +1,760 @@
+2021-11-16 23:52:51,637 FATAL c.p.a.s.c.u.UserThread [Thread-4] Can not get ObjectInputStream/ObjectOutputStream.
+java.net.SocketException: Программа на вашем хост-компьютере разорвала установленное подключение
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:325) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.read(ObjectInputStream.java:2875) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2891) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:3388) ~[?:?]
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:959) ~[?:?]
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:397) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:26) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-16 23:55:41,283 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1047 connected
+2021-11-16 23:55:53,867 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1051 connected
+2021-11-16 23:56:10,197 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1059 connected
+2021-11-17 12:39:04,195 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:49792 connected
+2021-11-17 12:39:17,671 FATAL c.p.a.s.c.u.UserWaiter [Thread-5] Can not create user thread.
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:555) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:544) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:643) ~[?:?]
+	at java.net.ServerSocket.bind(ServerSocket.java:388) ~[?:?]
+	at java.net.ServerSocket.<init>(ServerSocket.java:274) ~[?:?]
+	at java.net.ServerSocket.<init>(ServerSocket.java:167) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserWaiter.run(UserWaiter.java:13) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 12:40:14,011 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:49799 connected
+2021-11-17 12:40:20,077 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:49804 connected
+2021-11-17 13:01:58,243 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:49825 connected
+2021-11-17 13:02:05,787 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:49832 connected
+2021-11-17 13:02:11,518 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:49836 connected
+2021-11-17 18:58:44,074 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1030 connected
+2021-11-17 18:58:54,866 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:12625 connected
+2021-11-17 19:02:10,333 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:12644 connected
+2021-11-17 21:39:14,033 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:18207 connected
+2021-11-17 21:39:14,043 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 21:50:50,011 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:14652 connected
+2021-11-17 21:51:25,907 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 21:52:04,162 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:19194 connected
+2021-11-17 21:52:36,728 ERROR c.p.a.s.c.u.UserThread [Thread-4] Message class not found.
+java.lang.ClassNotFoundException: com.ponkratov.airport.messeger.Message
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:467) ~[?:?]
+	at java.io.ObjectInputStream.resolveClass(ObjectInputStream.java:778) ~[?:?]
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:2043) ~[?:?]
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1907) ~[?:?]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2209) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1742) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 21:53:14,976 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:19202 connected
+2021-11-17 22:43:11,239 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1046 connected
+2021-11-17 22:44:58,450 ERROR c.p.a.s.c.u.UserThread [Thread-4] Message class not found.
+java.lang.ClassNotFoundException: com.ponkratov.airport.client_test.Message
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:467) ~[?:?]
+	at java.io.ObjectInputStream.resolveClass(ObjectInputStream.java:778) ~[?:?]
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:2043) ~[?:?]
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1907) ~[?:?]
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2209) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1742) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 22:45:41,601 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1094 connected
+2021-11-17 22:46:43,519 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.io.NotSerializableException: com.ponkratov.airport.server.controller.requestCommand.CommandResult
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1197) ~[?:?]
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:354) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:44) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 22:47:04,459 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:5834 connected
+2021-11-17 22:47:44,795 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.io.NotSerializableException: com.ponkratov.airport.server.controller.requestCommand.CommandResult
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1197) ~[?:?]
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:354) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:44) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 22:48:08,897 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:5848 connected
+2021-11-17 22:48:46,764 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.io.NotSerializableException: com.ponkratov.airport.server.controller.requestCommand.CommandResult
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1197) ~[?:?]
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:354) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:44) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:09:59,193 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1055 connected
+2021-11-17 23:10:44,154 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.io.NotSerializableException: com.ponkratov.airport.server.model.entity.User
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1197) ~[?:?]
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1582) ~[?:?]
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1539) ~[?:?]
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1448) ~[?:?]
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1191) ~[?:?]
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:354) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:44) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:12:17,990 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:7724 connected
+2021-11-17 23:12:53,521 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:7932 connected
+2021-11-17 23:12:53,511 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:13:09,363 ERROR c.p.a.s.c.u.UserThread [Thread-5] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:13:16,132 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:23068 connected
+2021-11-17 23:13:53,427 ERROR c.p.a.s.c.u.UserThread [Thread-6] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:14:04,364 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:25340 connected
+2021-11-17 23:14:07,339 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:27:23,340 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1092 connected
+2021-11-17 23:27:23,885 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:37:10,512 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1042 connected
+2021-11-17 23:38:13,218 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1038 connected
+2021-11-17 23:40:57,917 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:12316 connected
+2021-11-17 23:42:05,171 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1041 connected
+2021-11-17 23:38:13,220 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:42:05,167 ERROR c.p.a.s.c.u.UserThread [Thread-6] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:325) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:42:05,165 ERROR c.p.a.s.c.u.UserThread [Thread-5] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:43:01,212 ERROR c.p.a.s.c.u.UserThread [Thread-7] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:43:24,900 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:13621 connected
+2021-11-17 23:48:05,281 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:1099 connected
+2021-11-17 23:48:05,284 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:1089 connected
+2021-11-17 23:48:05,285 ERROR c.p.a.s.c.u.UserThread [Thread-8] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:48:07,877 ERROR c.p.a.s.c.u.UserThread [Thread-9] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:48:07,877 ERROR c.p.a.s.c.u.UserThread [Thread-10] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:325) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:48:31,145 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:24646 connected
+2021-11-17 23:49:18,438 ERROR c.p.a.s.c.u.UserThread [Thread-11] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-17 23:49:21,052 INFO c.p.a.s.c.u.UserThread [Thread-12] Client /127.0.0.1:26348 connected
+2021-11-17 23:55:49,042 ERROR c.p.a.s.c.u.UserThread [Thread-12] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 18:05:52,957 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1081 connected
+2021-11-18 18:10:13,812 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 18:17:40,771 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1069 connected
+2021-11-18 18:18:36,988 ERROR c.p.a.s.c.u.UserThread [Thread-5] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 18:20:36,984 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:7166 connected
+2021-11-18 18:20:48,135 ERROR c.p.a.s.c.u.UserThread [Thread-6] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 18:21:09,260 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:7173 connected
+2021-11-18 18:21:44,740 ERROR c.p.a.s.c.u.UserThread [Thread-7] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 18:23:28,902 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:17753 connected
+2021-11-18 18:23:34,044 ERROR c.p.a.s.c.u.UserThread [Thread-8] Can not read request from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 18:24:03,834 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:17759 connected
+2021-11-18 18:24:03,866 ERROR c.p.a.s.c.u.UserThread [Thread-9] Can not read request from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 18:24:39,760 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:17766 connected
+2021-11-18 18:24:39,789 ERROR c.p.a.s.c.u.UserThread [Thread-10] Can not read request from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 19:05:53,982 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:11292 connected
+2021-11-18 19:05:54,020 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 19:06:49,226 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1046 connected
+2021-11-18 19:06:49,251 ERROR c.p.a.s.c.u.UserThread [Thread-5] Can not read request from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 19:07:05,701 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1037 connected
+2021-11-18 19:07:05,732 ERROR c.p.a.s.c.u.UserThread [Thread-6] Can not read request from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-18 23:48:30,278 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1065 connected
+2021-11-18 23:50:23,992 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1045 connected
+2021-11-18 23:52:09,733 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1031 connected
+2021-11-18 23:54:12,723 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1373 connected
+2021-11-18 23:57:00,936 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:13599 connected
+2021-11-19 00:02:31,607 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read request from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:40) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-20 18:59:29,292 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:21232 connected
+2021-11-20 18:59:50,687 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Failed to call `setAccess()` on Constructor 'com.ponkratov.airport.server.controller.command.Request' due to `java.lang.reflect.InaccessibleObjectException`, problem: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+ at [Source: (String)"{"command":"AUTHENTICATE","params":{"userLogin":"admin","userpass":"123456"}}"; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:62) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:268) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.createBeanDeserializer(BeanDeserializerFactory.java:150) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer2(DeserializerCache.java:415) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer(DeserializerCache.java:350) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCache2(DeserializerCache.java:264) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCacheValueDeserializer(DeserializerCache.java:244) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache.findValueDeserializer(DeserializerCache.java:142) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.DeserializationContext.findRootValueDeserializer(DeserializationContext.java:642) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._findRootDeserializer(ObjectMapper.java:4806) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4676) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3630) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3598) ~[jackson-databind-2.13.0.jar:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:41) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.IllegalArgumentException: Failed to call `setAccess()` on Constructor 'com.ponkratov.airport.server.controller.command.Request' due to `java.lang.reflect.InaccessibleObjectException`, problem: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+	at com.fasterxml.jackson.databind.util.ClassUtil.checkAndFixAccess(ClassUtil.java:1009) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector._fixAccess(CreatorCollector.java:278) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector.setDefaultCreator(CreatorCollector.java:130) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitConstructorCreators(BasicDeserializerFactory.java:446) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._constructDefaultValueInstantiator(BasicDeserializerFactory.java:304) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.findValueInstantiator(BasicDeserializerFactory.java:223) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:261) ~[jackson-databind-2.13.0.jar:?]
+	... 13 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[?:?]
+	at java.lang.reflect.Constructor.checkCanSetAccessible(Constructor.java:188) ~[?:?]
+	at java.lang.reflect.Constructor.setAccessible(Constructor.java:181) ~[?:?]
+	at com.fasterxml.jackson.databind.util.ClassUtil.checkAndFixAccess(ClassUtil.java:996) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector._fixAccess(CreatorCollector.java:278) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector.setDefaultCreator(CreatorCollector.java:130) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitConstructorCreators(BasicDeserializerFactory.java:446) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._constructDefaultValueInstantiator(BasicDeserializerFactory.java:304) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.findValueInstantiator(BasicDeserializerFactory.java:223) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:261) ~[jackson-databind-2.13.0.jar:?]
+	... 13 more
+2021-11-20 19:00:19,574 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:12540 connected
+2021-11-20 19:03:29,424 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Failed to call `setAccess()` on Constructor 'com.ponkratov.airport.server.controller.command.Request' due to `java.lang.reflect.InaccessibleObjectException`, problem: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+ at [Source: (String)"{"command":"AUTHENTICATE","params":{"userLogin":"admin","userpass":"123456"}}"; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:62) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:268) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.createBeanDeserializer(BeanDeserializerFactory.java:150) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer2(DeserializerCache.java:415) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer(DeserializerCache.java:350) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCache2(DeserializerCache.java:264) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCacheValueDeserializer(DeserializerCache.java:244) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache.findValueDeserializer(DeserializerCache.java:142) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.DeserializationContext.findRootValueDeserializer(DeserializationContext.java:642) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._findRootDeserializer(ObjectMapper.java:4806) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4676) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3630) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3598) ~[jackson-databind-2.13.0.jar:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:41) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.IllegalArgumentException: Failed to call `setAccess()` on Constructor 'com.ponkratov.airport.server.controller.command.Request' due to `java.lang.reflect.InaccessibleObjectException`, problem: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+	at com.fasterxml.jackson.databind.util.ClassUtil.checkAndFixAccess(ClassUtil.java:1009) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector._fixAccess(CreatorCollector.java:278) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector.setDefaultCreator(CreatorCollector.java:130) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitConstructorCreators(BasicDeserializerFactory.java:446) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._constructDefaultValueInstantiator(BasicDeserializerFactory.java:304) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.findValueInstantiator(BasicDeserializerFactory.java:223) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:261) ~[jackson-databind-2.13.0.jar:?]
+	... 13 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[?:?]
+	at java.lang.reflect.Constructor.checkCanSetAccessible(Constructor.java:188) ~[?:?]
+	at java.lang.reflect.Constructor.setAccessible(Constructor.java:181) ~[?:?]
+	at com.fasterxml.jackson.databind.util.ClassUtil.checkAndFixAccess(ClassUtil.java:996) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector._fixAccess(CreatorCollector.java:278) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector.setDefaultCreator(CreatorCollector.java:130) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitConstructorCreators(BasicDeserializerFactory.java:446) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._constructDefaultValueInstantiator(BasicDeserializerFactory.java:304) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.findValueInstantiator(BasicDeserializerFactory.java:223) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:261) ~[jackson-databind-2.13.0.jar:?]
+	... 13 more
+2021-11-20 19:05:29,668 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1048 connected
+2021-11-20 19:07:15,285 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Failed to call `setAccess()` on Constructor 'com.ponkratov.airport.server.controller.command.Request' due to `java.lang.reflect.InaccessibleObjectException`, problem: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+ at [Source: (String)"{"command":"AUTHENTICATE","params":{"userLogin":"admin","userpass":"123456"}}"; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:62) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:268) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.createBeanDeserializer(BeanDeserializerFactory.java:150) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer2(DeserializerCache.java:415) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer(DeserializerCache.java:350) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCache2(DeserializerCache.java:264) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCacheValueDeserializer(DeserializerCache.java:244) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache.findValueDeserializer(DeserializerCache.java:142) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.DeserializationContext.findRootValueDeserializer(DeserializationContext.java:642) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._findRootDeserializer(ObjectMapper.java:4806) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4676) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3630) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3598) ~[jackson-databind-2.13.0.jar:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:42) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.IllegalArgumentException: Failed to call `setAccess()` on Constructor 'com.ponkratov.airport.server.controller.command.Request' due to `java.lang.reflect.InaccessibleObjectException`, problem: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+	at com.fasterxml.jackson.databind.util.ClassUtil.checkAndFixAccess(ClassUtil.java:1009) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector._fixAccess(CreatorCollector.java:278) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector.setDefaultCreator(CreatorCollector.java:130) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitConstructorCreators(BasicDeserializerFactory.java:446) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._constructDefaultValueInstantiator(BasicDeserializerFactory.java:304) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.findValueInstantiator(BasicDeserializerFactory.java:223) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:261) ~[jackson-databind-2.13.0.jar:?]
+	... 13 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[?:?]
+	at java.lang.reflect.Constructor.checkCanSetAccessible(Constructor.java:188) ~[?:?]
+	at java.lang.reflect.Constructor.setAccessible(Constructor.java:181) ~[?:?]
+	at com.fasterxml.jackson.databind.util.ClassUtil.checkAndFixAccess(ClassUtil.java:996) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector._fixAccess(CreatorCollector.java:278) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector.setDefaultCreator(CreatorCollector.java:130) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitConstructorCreators(BasicDeserializerFactory.java:446) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._constructDefaultValueInstantiator(BasicDeserializerFactory.java:304) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.findValueInstantiator(BasicDeserializerFactory.java:223) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:261) ~[jackson-databind-2.13.0.jar:?]
+	... 13 more
+2021-11-20 20:45:45,784 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1047 connected
+2021-11-20 20:45:46,318 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Failed to call `setAccess()` on Constructor 'com.ponkratov.airport.server.controller.command.Request' due to `java.lang.reflect.InaccessibleObjectException`, problem: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+ at [Source: (String)"{"command":"AUTHENTICATE","params":{"userLogin":"admin","userpass":"123456"}}"; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:62) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:268) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.createBeanDeserializer(BeanDeserializerFactory.java:150) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer2(DeserializerCache.java:415) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer(DeserializerCache.java:350) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCache2(DeserializerCache.java:264) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCacheValueDeserializer(DeserializerCache.java:244) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DeserializerCache.findValueDeserializer(DeserializerCache.java:142) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.DeserializationContext.findRootValueDeserializer(DeserializationContext.java:642) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._findRootDeserializer(ObjectMapper.java:4806) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4676) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3630) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3598) ~[jackson-databind-2.13.0.jar:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:42) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.IllegalArgumentException: Failed to call `setAccess()` on Constructor 'com.ponkratov.airport.server.controller.command.Request' due to `java.lang.reflect.InaccessibleObjectException`, problem: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+	at com.fasterxml.jackson.databind.util.ClassUtil.checkAndFixAccess(ClassUtil.java:1009) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector._fixAccess(CreatorCollector.java:278) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector.setDefaultCreator(CreatorCollector.java:130) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitConstructorCreators(BasicDeserializerFactory.java:446) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._constructDefaultValueInstantiator(BasicDeserializerFactory.java:304) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.findValueInstantiator(BasicDeserializerFactory.java:223) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:261) ~[jackson-databind-2.13.0.jar:?]
+	... 13 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make public com.ponkratov.airport.server.controller.command.Request() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.controller.command" to module com.fasterxml.jackson.databind
+	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[?:?]
+	at java.lang.reflect.Constructor.checkCanSetAccessible(Constructor.java:188) ~[?:?]
+	at java.lang.reflect.Constructor.setAccessible(Constructor.java:181) ~[?:?]
+	at com.fasterxml.jackson.databind.util.ClassUtil.checkAndFixAccess(ClassUtil.java:996) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector._fixAccess(CreatorCollector.java:278) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.impl.CreatorCollector.setDefaultCreator(CreatorCollector.java:130) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._addExplicitConstructorCreators(BasicDeserializerFactory.java:446) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory._constructDefaultValueInstantiator(BasicDeserializerFactory.java:304) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.findValueInstantiator(BasicDeserializerFactory.java:223) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerFactory.buildBeanDeserializer(BeanDeserializerFactory.java:261) ~[jackson-databind-2.13.0.jar:?]
+	... 13 more
+2021-11-20 20:53:30,475 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1031 connected
+2021-11-20 20:53:30,971 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "command" (class com.ponkratov.airport.server.controller.command.Request), not marked as ignorable (2 known properties: "requestCommand", "requestParams"])
+ at [Source: (String)"{"command":"AUTHENTICATE","params":{"userLogin":"admin","userpass":"123456"}}"; line: 1, column: 13] (through reference chain: com.ponkratov.airport.server.controller.command.Request["command"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1989) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4675) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3630) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3598) ~[jackson-databind-2.13.0.jar:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:43) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-20 20:56:19,619 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1063 connected
+2021-11-20 20:56:20,172 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Invalid type definition for type `com.ponkratov.airport.server.model.entity.User`: Failed to construct BeanSerializer for [simple type, class com.ponkratov.airport.server.model.entity.User]: (java.lang.IllegalArgumentException) Failed to call `setAccess()` on Method 'getUserID' due to `java.lang.reflect.InaccessibleObjectException`, problem: Unable to make public int com.ponkratov.airport.server.model.entity.User.getUserID() accessible: module com.ponkratov.airport.server does not "exports com.ponkratov.airport.server.model.entity" to module com.fasterxml.jackson.databind
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:72) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadTypeDefinition(SerializerProvider.java:1272) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ser.BeanSerializerFactory.constructBeanOrAddOnSerializer(BeanSerializerFactory.java:470) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ser.BeanSerializerFactory.findBeanOrAddOnSerializer(BeanSerializerFactory.java:294) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ser.BeanSerializerFactory._createSerializer2(BeanSerializerFactory.java:239) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ser.BeanSerializerFactory.createSerializer(BeanSerializerFactory.java:173) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.SerializerProvider._createUntypedSerializer(SerializerProvider.java:1495) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.SerializerProvider._createAndCacheUntypedSerializer(SerializerProvider.java:1443) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.SerializerProvider.findValueSerializer(SerializerProvider.java:544) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.SerializerProvider.findTypedValueSerializer(SerializerProvider.java:822) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:308) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4569) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:3822) ~[jackson-databind-2.13.0.jar:?]
+	at com.ponkratov.airport.server.controller.command.impl.AuthenticateUserCommand.execute(AuthenticateUserCommand.java:27) ~[classes/:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:46) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-20 20:58:31,681 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1047 connected
+2021-11-20 20:58:32,992 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:41) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-20 20:59:34,861 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1721 connected
+2021-11-20 20:59:35,865 ERROR c.p.a.s.c.u.UserThread [Thread-5] Can not read message from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:41) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-20 21:00:28,910 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1038 connected
+2021-11-20 21:00:29,274 ERROR c.p.a.s.c.u.UserThread [Thread-6] Can not read message from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:41) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-20 21:02:49,177 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1038 connected
+2021-11-20 21:02:49,539 ERROR c.p.a.s.c.u.UserThread [Thread-7] Can not read message from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:41) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-20 21:03:18,665 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:1052 connected
+2021-11-20 21:03:19,093 ERROR c.p.a.s.c.u.UserThread [Thread-8] Can not read message from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:41) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-20 21:06:02,753 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1052 connected
+2021-11-20 21:06:03,265 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:41) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-20 21:45:16,190 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1034 connected
+2021-11-20 21:45:16,508 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+java.io.EOFException: null
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3192) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:42) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
