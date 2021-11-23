@@ -21,7 +21,13 @@ public class UserDaoImpl extends UserDao {
             login,
             email,
             user.roleID
+            FROM user;
+            """;
+
+    private static final String SQL_GET_PASSWORD = """
+            SELECT password
             FROM user
+            where userID = ?;
             """;
 
     @Override
@@ -36,13 +42,13 @@ public class UserDaoImpl extends UserDao {
                 String email = resultSet.getString(3);
                 int roleID = resultSet.getInt(4);
 
-                User user = new User.UserBuilder()
+                /*User user = new User.UserBuilder()
                         .setUserID(userID)
                         .setLogin(login)
                         .setEmail(email)
                         .setRoleID(roleID)
                         .createUser();
-                users.add(user);
+                users.add(user);*/
             }
         } catch (SQLException e) {
             LOG.error("Failed to execute SQL_FIND_ALL", e);
@@ -94,7 +100,18 @@ public class UserDaoImpl extends UserDao {
 
     @Override
     public String getPassword(int userID) throws DaoException {
-        return null;
+        try (PreparedStatement statement = connection.prepareStatement(SQL_GET_PASSWORD)) {
+            statement.setInt(1, userID);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                return resultSet.getString(1);
+            } else {
+                throw new DaoException("User with id " + userID + " not found");
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_GET_PASSWORD", e);
+            throw new DaoException("Failed to execute SQL_GET_PASSWORD", e);
+        }
     }
 
     @Override

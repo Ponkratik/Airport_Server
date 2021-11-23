@@ -16,8 +16,8 @@ public class ParameterValidatorImpl implements ParameterValidator {
     }
 
     @Override
-    public boolean validateUsername(String username) {
-        return username != null && username.matches(USERNAME_REGEXP);
+    public boolean validateLogin(String login) {
+        return login != null && login.matches(USERNAME_REGEXP);
     }
 
     @Override

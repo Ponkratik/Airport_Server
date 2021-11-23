@@ -1,22 +1,25 @@
 package com.ponkratov.airport.server.model.entity;
 
-import java.io.Serial;
-import java.io.Serializable;
+import java.util.Objects;
 
-public class User implements Entity, Serializable {
-    @Serial
-    private static final long serialVersionUID = 3L;
+public class User implements Entity{
     private final int userID;
     private final String login;
-    private final String password;
     private final String email;
+    private final String lastName;
+    private final String firstName;
+    private final String surName;
+    private final String userPictureLink;
     private final int roleID;
 
-    private User(int userID, String login, String password, String email, int roleID) {
+    public User(int userID, String login, String email, String lastName, String firstName, String surName, String userPictureLink, int roleID) {
         this.userID = userID;
         this.login = login;
-        this.password = password;
         this.email = email;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.surName = surName;
+        this.userPictureLink = userPictureLink;
         this.roleID = roleID;
     }
 
@@ -28,52 +31,98 @@ public class User implements Entity, Serializable {
         return login;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
     public String getEmail() {
         return email;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getSurName() {
+        return surName;
+    }
+
+    public String getUserPictureLink() {
+        return userPictureLink;
     }
 
     public int getRoleID() {
         return roleID;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        User user = (User) o;
+        return userID == user.userID
+                && roleID == user.roleID
+                && Objects.equals(login, user.login)
+                && Objects.equals(email, user.email)
+                && Objects.equals(lastName, user.lastName)
+                && Objects.equals(firstName, user.firstName)
+                && Objects.equals(surName, user.surName)
+                && Objects.equals(userPictureLink, user.userPictureLink);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userID, login, email, lastName, firstName, surName, userPictureLink, roleID);
+    }
+
     public static class UserBuilder {
         private int userID;
         private String login;
-        private String password;
         private String email;
+        private String lastName;
+        private String firstName;
+        private String surName;
+        private String userPictureLink;
         private int roleID;
 
-        public UserBuilder setUserID(int userID) {
+        public void setUserID(int userID) {
             this.userID = userID;
-            return this;
         }
 
-        public UserBuilder setLogin(String login) {
+        public void setLogin(String login) {
             this.login = login;
-            return this;
         }
 
-        public UserBuilder setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-
-        public UserBuilder setEmail(String email) {
+        public void setEmail(String email) {
             this.email = email;
-            return this;
         }
 
-        public UserBuilder setRoleID(int roleID) {
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
+
+        public void setFirstName(String firstName) {
+            this.firstName = firstName;
+        }
+
+        public void setSurName(String surName) {
+            this.surName = surName;
+        }
+
+        public void setUserPictureLink(String userPictureLink) {
+            this.userPictureLink = userPictureLink;
+        }
+
+        public void setRoleID(int roleID) {
             this.roleID = roleID;
-            return this;
         }
 
         public User createUser() {
-            return new User(userID, login, password, email, roleID);
+            return new User(userID, login, email, lastName, firstName, surName, userPictureLink, roleID);
         }
     }
 }
