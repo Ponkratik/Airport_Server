@@ -10,9 +10,10 @@ public class User implements Entity{
     private final String firstName;
     private final String surName;
     private final String userPictureLink;
+    private final boolean isBlocked;
     private final int roleID;
 
-    public User(int userID, String login, String email, String lastName, String firstName, String surName, String userPictureLink, int roleID) {
+    public User(int userID, String login, String email, String lastName, String firstName, String surName, String userPictureLink, boolean isBlocked, int roleID) {
         this.userID = userID;
         this.login = login;
         this.email = email;
@@ -20,6 +21,7 @@ public class User implements Entity{
         this.firstName = firstName;
         this.surName = surName;
         this.userPictureLink = userPictureLink;
+        this.isBlocked = isBlocked;
         this.roleID = roleID;
     }
 
@@ -51,6 +53,10 @@ public class User implements Entity{
         return userPictureLink;
     }
 
+    public boolean isBlocked() {
+        return isBlocked;
+    }
+
     public int getRoleID() {
         return roleID;
     }
@@ -66,6 +72,7 @@ public class User implements Entity{
         User user = (User) o;
         return userID == user.userID
                 && roleID == user.roleID
+                && isBlocked == user.isBlocked
                 && Objects.equals(login, user.login)
                 && Objects.equals(email, user.email)
                 && Objects.equals(lastName, user.lastName)
@@ -76,7 +83,7 @@ public class User implements Entity{
 
     @Override
     public int hashCode() {
-        return Objects.hash(userID, login, email, lastName, firstName, surName, userPictureLink, roleID);
+        return Objects.hash(userID, login, email, lastName, firstName, surName, userPictureLink, isBlocked, roleID);
     }
 
     public static class UserBuilder {
@@ -87,6 +94,7 @@ public class User implements Entity{
         private String firstName;
         private String surName;
         private String userPictureLink;
+        private boolean isBlocked;
         private int roleID;
 
         public void setUserID(int userID) {
@@ -117,12 +125,16 @@ public class User implements Entity{
             this.userPictureLink = userPictureLink;
         }
 
+        public void setBlocked(boolean blocked) {
+            isBlocked = blocked;
+        }
+
         public void setRoleID(int roleID) {
             this.roleID = roleID;
         }
 
         public User createUser() {
-            return new User(userID, login, email, lastName, firstName, surName, userPictureLink, roleID);
+            return new User(userID, login, email, lastName, firstName, surName, userPictureLink, isBlocked, roleID);
         }
     }
 }

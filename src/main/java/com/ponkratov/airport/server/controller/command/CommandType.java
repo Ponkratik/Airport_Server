@@ -1,9 +1,12 @@
 package com.ponkratov.airport.server.controller.command;
 
 public enum CommandType {
+    REGISTER,
     AUTHENTICATE,
-    FINDALLUSERS,
     LOGOUT,
+    FINDALLUSERS,
+    CHANGEPASSWORD,
+    RESTOREPASSWORD,
     DEFAULT;
     //TODO: Сделать команду для DEFAULT
 

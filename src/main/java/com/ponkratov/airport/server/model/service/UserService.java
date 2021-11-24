@@ -8,7 +8,11 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
-    Optional<User> createUser(String login, String password, String email, int roleID) throws ServiceException;
+    boolean createUser(String login, String password, String email, String lastName, String firstName, String surName, int roleID) throws ServiceException;
     Optional<User> authenticateByLogin(String login, String password) throws ServiceException;
+    boolean comparePassword(String password1, String password2);
+    boolean approvePassword(int userID, String password) throws ServiceException;
+    boolean updatePassword(int userID, String password) throws ServiceException;
+    boolean restorePassword(int userID) throws ServiceException;
     List<User> findAll() throws ServiceException;
 }

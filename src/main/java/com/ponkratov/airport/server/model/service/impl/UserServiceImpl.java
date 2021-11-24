@@ -26,9 +26,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<User> createUser(String login, String password, String email, int roleID) throws ServiceException {
-        return Optional.empty();
+    public boolean createUser(String login, String password, String email, String lastName, String firstName, String surName, int roleID) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            boolean isCreated = dao.create(login, password, email, lastName, firstName, surName, roleID);
+            return isCreated;
+        } catch (DaoException e) {
+            LOG.error("Failed to create user " + login, e);
+            throw new ServiceException("Failed to create user " + login, e);
+        }
     }
+
 
     @Override
     public Optional<User> authenticateByLogin(String login, String password) throws ServiceException{
@@ -47,6 +56,52 @@ public class UserServiceImpl implements UserService {
         } catch (DaoException e) {
             LOG.error("Failed to authenticate user " + login, e);
             throw new ServiceException("Failed to authenticate user " + login, e);
+        }
+    }
+
+    @Override
+    public boolean comparePassword(String password1, String password2) {
+        return password1.equals(password2);
+    }
+
+    @Override
+    public boolean approvePassword(int userID, String password) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            String passFromDB = dao.getPassword(userID);
+            String passToAuth = PasswordEncryptor.encrypt(password);
+            return passFromDB.equals(passToAuth);
+        } catch (DaoException e) {
+            LOG.error("Failed to approve password, userID = " + userID, e);
+            throw new ServiceException("Failed to approve password, userID = " + userID, e);
+        }
+    }
+
+    @Override
+    public boolean updatePassword(int userID, String password) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            boolean isUpdated = dao.updatePassword(userID, password);
+            return isUpdated;
+        } catch (DaoException e) {
+            LOG.error("Failed to change user password, userID = " + userID, e);
+            throw new ServiceException("Failed to change user password, userID = " + userID, e);
+        }
+    }
+
+    @Override
+    public boolean restorePassword(int userID) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            String newPassword = PasswordEncryptor.encrypt("qwerty");
+            boolean isRestored = dao.restorePassword(userID, newPassword);
+            return isRestored;
+        } catch (DaoException e) {
+            LOG.error("Failed to restore user password, userID = " + userID, e);
+            throw new ServiceException("Failed to restore user password, userID = " + userID, e);
         }
     }
 

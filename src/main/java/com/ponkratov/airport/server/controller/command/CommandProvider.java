@@ -1,7 +1,9 @@
 package com.ponkratov.airport.server.controller.command;
 
 import com.ponkratov.airport.server.controller.command.impl.AuthenticateUserCommand;
+import com.ponkratov.airport.server.controller.command.impl.ChangeUserPasswordCommand;
 import com.ponkratov.airport.server.controller.command.impl.FindAllUsersCommand;
+import com.ponkratov.airport.server.controller.command.impl.RestoreUserPasswordCommand;
 
 import java.util.EnumMap;
 
@@ -12,6 +14,8 @@ public class CommandProvider {
     private CommandProvider() {
         commands.put(CommandType.AUTHENTICATE, new AuthenticateUserCommand());
         commands.put(CommandType.FINDALLUSERS, new FindAllUsersCommand());
+        commands.put(CommandType.CHANGEPASSWORD, new ChangeUserPasswordCommand());
+        commands.put(CommandType.RESTOREPASSWORD, new RestoreUserPasswordCommand());
     }
 
     public static CommandProvider getInstance() {

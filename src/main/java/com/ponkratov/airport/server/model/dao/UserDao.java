@@ -16,11 +16,13 @@ public abstract class UserDao extends BaseDao<Integer, User> {
 
     public abstract List<User> findByLoginRegexp(String regexp) throws DaoException;
 
-    public abstract boolean create(String login, String password, String email, int roleID) throws DaoException;
+    public abstract boolean create(String login, String password, String email, String lastName, String firstName, String surName, int roleID) throws DaoException;
 
     public abstract String getPassword(int userID) throws DaoException;
 
     public abstract boolean updatePassword(int toUpdateID, String newPassword) throws DaoException;
+
+    public abstract boolean restorePassword(int userID, String password) throws DaoException;
 
     public abstract boolean updateRole(int toUpdateId, int newRole) throws DaoException;
 }
