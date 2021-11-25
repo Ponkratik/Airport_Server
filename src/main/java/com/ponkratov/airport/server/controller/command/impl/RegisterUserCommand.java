@@ -19,7 +19,7 @@ public class RegisterUserCommand implements ActionCommand {
     @Override
     public CommandResult execute(Map<String, String> params) throws JsonProcessingException {
         String userLogin = params.get(RequestAttribute.USERLOGIN);
-        String userPass = params.get(RequestAttribute.USERPASS);
+        String userPass = "qwerty";
         String userEmail = params.get(RequestAttribute.USEREMAIL);
         String userLastName = params.get(RequestAttribute.USERLASTNAME);
         String userFirstName = params.get(RequestAttribute.USERFIRSTNAME);

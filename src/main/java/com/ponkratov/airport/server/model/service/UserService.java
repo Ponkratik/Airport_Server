@@ -1,6 +1,5 @@
 package com.ponkratov.airport.server.model.service;
 
-import com.ponkratov.airport.server.exception.DaoException;
 import com.ponkratov.airport.server.exception.ServiceException;
 import com.ponkratov.airport.server.model.entity.User;
 
@@ -14,5 +13,7 @@ public interface UserService {
     boolean approvePassword(int userID, String password) throws ServiceException;
     boolean updatePassword(int userID, String password) throws ServiceException;
     boolean restorePassword(int userID) throws ServiceException;
+    boolean block(int userID, boolean toBlock) throws ServiceException;
+    boolean updateRole(int userID, int newRole) throws ServiceException;
     List<User> findAll() throws ServiceException;
 }

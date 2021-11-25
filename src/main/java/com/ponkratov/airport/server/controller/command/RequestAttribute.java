@@ -10,4 +10,8 @@ public class RequestAttribute {
     public static final String USERFIRSTNAME = "userFirstName";
     public static final String USERSURNAME = "userSurName";
     public static final String USERROLEID = "userRoleID";
+    public static final String USERID = "userID";
+    public static final String USERCURRENTBLOCK = "userCurrentBlock";
+    public static final String ROLEID = "roleID";
+    public static final String ROLENAME = "roleName";
 }

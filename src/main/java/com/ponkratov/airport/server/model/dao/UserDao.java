@@ -5,7 +5,6 @@ import com.ponkratov.airport.server.model.entity.User;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.OptionalInt;
 
 public abstract class UserDao extends BaseDao<Integer, User> {
     public abstract Optional<User> findByLogin(String username) throws DaoException;
@@ -24,5 +23,7 @@ public abstract class UserDao extends BaseDao<Integer, User> {
 
     public abstract boolean restorePassword(int userID, String password) throws DaoException;
 
-    public abstract boolean updateRole(int toUpdateId, int newRole) throws DaoException;
+    public abstract boolean block(int userID, boolean toBlock) throws DaoException;
+
+    public abstract boolean updateRole(int userID, int newRole) throws DaoException;
 }

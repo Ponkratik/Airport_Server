@@ -4,9 +4,17 @@ public enum CommandType {
     REGISTER,
     AUTHENTICATE,
     LOGOUT,
+
     FINDALLUSERS,
     CHANGEPASSWORD,
     RESTOREPASSWORD,
+    BLOCKUSER,
+    UPDATEUSERROLE,
+
+    FINDALLROLES,
+    FINDROLEBYID,
+    FINDROLEBYNAME,
+
     DEFAULT;
     //TODO: Сделать команду для DEFAULT
 

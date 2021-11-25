@@ -20,6 +20,7 @@ public class UserDaoImpl extends UserDao {
             SELECT userID,
             login,
             email,
+            isBlocked,
             user.roleID
             FROM user;
             """;
@@ -31,9 +32,10 @@ public class UserDaoImpl extends UserDao {
             lastName,
             firstName,
             surName,
+            isBlocked,
             user.roleID)
             VALUES
-            (?, ?, ?, ?, ?, ?, ?);
+            (?, ?, ?, ?, ?, ?, ?, ?);
             """;
 
     private static final String SQL_GET_PASSWORD = """
@@ -45,13 +47,25 @@ public class UserDaoImpl extends UserDao {
     private static final String SQL_UPDATE_PASSWORD = """
             UPDATE user
             SET password = ?
-            WHERE userID = ?
+            WHERE userID = ?;
             """;
 
     private static final String SQL_RESTORE_PASSWORD = """
             UPDATE user
             SET password = ?
-            WHERE userID = ?
+            WHERE userID = ?;
+            """;
+
+    private static final String SQL_BLOCK_USER = """
+            UPDATE user
+            SET isBlocked = ?
+            WHERE userID = ?;
+            """;
+
+    private static final String SQL_UPDATE_ROLE = """
+            UPDATE user
+            SET roleID = ?
+            WHERE userID = ?;
             """;
 
     @Override
@@ -64,7 +78,8 @@ public class UserDaoImpl extends UserDao {
                 int userID = resultSet.getInt(1);
                 String login = resultSet.getString(2);
                 String email = resultSet.getString(3);
-                int roleID = resultSet.getInt(4);
+                boolean isBlocked = resultSet.getBoolean(4);
+                int roleID = resultSet.getInt(5);
 
                 /*User user = new User.UserBuilder()
                         .setUserID(userID)
@@ -126,7 +141,8 @@ public class UserDaoImpl extends UserDao {
             statement.setString(4, lastName);
             statement.setString(5, firstName);
             statement.setString(6, surName);
-            statement.setInt(7, roleID);
+            statement.setBoolean(7, false);
+            statement.setInt(8, roleID);
             return statement.executeUpdate() > 0;
         } catch (SQLException e) {
             LOG.error("Failed to execute SQL_CREATE_USER", e);
@@ -176,7 +192,26 @@ public class UserDaoImpl extends UserDao {
     }
 
     @Override
-    public boolean updateRole(int toUpdateId, int newRole) throws DaoException {
-        return false;
+    public boolean block(int userID, boolean toBlock) throws DaoException {
+        try (PreparedStatement statement = connection.prepareStatement(SQL_BLOCK_USER)) {
+            statement.setBoolean(1, toBlock);
+            statement.setInt(2, userID);
+            return statement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_BLOCK_USER, userID = " + userID, e);
+            throw new DaoException("Failed to execute SQL_BLOCK_USER, userID = " + userID, e);
+        }
+    }
+
+    @Override
+    public boolean updateRole(int userID, int newRole) throws DaoException {
+        try (PreparedStatement statement = connection.prepareStatement(SQL_UPDATE_ROLE)) {
+            statement.setInt(1, newRole);
+            statement.setInt(2, userID);
+            return statement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_UPDATE_ROLE, userID = " + userID, e);
+            throw new DaoException("Failed to execute SQL_UPDATE_ROLE, userID = " + userID, e);
+        }
     }
 }

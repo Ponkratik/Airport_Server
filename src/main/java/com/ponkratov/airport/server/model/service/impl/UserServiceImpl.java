@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
         UserDao dao = new UserDaoImpl();
         try (EntityTransaction transaction = new EntityTransaction()) {
             transaction.initAction(dao);
-            boolean isCreated = dao.create(login, password, email, lastName, firstName, surName, roleID);
+            boolean isCreated = dao.create(login, PasswordEncryptor.encrypt(password), email, lastName, firstName, surName, roleID);
             return isCreated;
         } catch (DaoException e) {
             LOG.error("Failed to create user " + login, e);
@@ -102,6 +102,32 @@ public class UserServiceImpl implements UserService {
         } catch (DaoException e) {
             LOG.error("Failed to restore user password, userID = " + userID, e);
             throw new ServiceException("Failed to restore user password, userID = " + userID, e);
+        }
+    }
+
+    @Override
+    public boolean block(int userID, boolean toBlock) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            boolean isExecuted = dao.block(userID, toBlock);
+            return isExecuted;
+        } catch (DaoException e) {
+            LOG.error("Failed to block user, userID = " + userID, e);
+            throw new ServiceException("Failed to block user, userID = " + userID, e);
+        }
+    }
+
+    @Override
+    public boolean updateRole(int userID, int newRole) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            boolean isExecuted = dao.updateRole(userID, newRole);
+            return isExecuted;
+        } catch (DaoException e) {
+            LOG.error("Failed to update user role, userID = " + userID, e);
+            throw new ServiceException("Failed to update user role, userID = " + userID, e);
         }
     }
 
