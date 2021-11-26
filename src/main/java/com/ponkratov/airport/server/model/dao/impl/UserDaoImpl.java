@@ -2,6 +2,7 @@ package com.ponkratov.airport.server.model.dao.impl;
 
 import com.ponkratov.airport.server.exception.DaoException;
 import com.ponkratov.airport.server.model.dao.UserDao;
+import com.ponkratov.airport.server.model.entity.Role;
 import com.ponkratov.airport.server.model.entity.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -20,9 +21,48 @@ public class UserDaoImpl extends UserDao {
             SELECT userID,
             login,
             email,
+            lastName,
+            firstName,
+            surName,
             isBlocked,
             user.roleID
             FROM user;
+            """;
+
+    private static final String SQL_FIND_ID = """
+            SELECT login,
+            email,
+            lastName,
+            firstName,
+            surName,
+            isBlocked,
+            user.roleID
+            FROM user
+            WHERE userID = ?;
+            """;
+
+    private static final String SQL_FIND_LOGIN = """
+            SELECT userID,
+            email,
+            lastName,
+            firstName,
+            surName,
+            isBlocked,
+            user.roleID
+            FROM user
+            WHERE login = ?;
+            """;
+
+    private static final String SQL_FIND_EMAIL = """
+            SELECT userID,
+            login,
+            lastName,
+            firstName,
+            surName,
+            isBlocked,
+            user.roleID
+            FROM user
+            WHERE email = ?;
             """;
 
     private static final String SQL_CREATE_USER = """
@@ -68,6 +108,23 @@ public class UserDaoImpl extends UserDao {
             WHERE userID = ?;
             """;
 
+    private static final String SQL_REMOVE_ID = """
+            DELETE FROM user
+            WHERE userID = ?
+            """;
+
+    private static final String SQL_UPDATE_ID = """
+            UPDATE user
+            SET login = ?,
+            email = ?,
+            lastName = ?,
+            firstName = ?,
+            surName = ?,
+            isBlocked = ?,
+            user.roleID = ?
+            WHERE userID = ?;
+            """;
+
     @Override
     public List<User> findAll() throws DaoException {
         List<User> users = new ArrayList<>();
@@ -78,16 +135,24 @@ public class UserDaoImpl extends UserDao {
                 int userID = resultSet.getInt(1);
                 String login = resultSet.getString(2);
                 String email = resultSet.getString(3);
-                boolean isBlocked = resultSet.getBoolean(4);
-                int roleID = resultSet.getInt(5);
+                String lastName = resultSet.getString(4);
+                String firstName = resultSet.getString(5);
+                String surName = resultSet.getString(6);
+                boolean isBlocked = resultSet.getBoolean(7);
+                int roleID = resultSet.getInt(8);
 
-                /*User user = new User.UserBuilder()
-                        .setUserID(userID)
-                        .setLogin(login)
-                        .setEmail(email)
-                        .setRoleID(roleID)
-                        .createUser();
-                users.add(user);*/
+                User user = new User.UserBuilder().
+                        setUserID(userID).
+                        setLogin(login).
+                        setEmail(email).
+                        setLastName(lastName).
+                        setFirstName(firstName).
+                        setSurName(surName).
+                        setBlocked(isBlocked).
+                        setRoleID(roleID).
+                        createUser();
+
+                users.add(user);
             }
         } catch (SQLException e) {
             LOG.error("Failed to execute SQL_FIND_ALL", e);
@@ -99,27 +164,136 @@ public class UserDaoImpl extends UserDao {
 
     @Override
     public Optional<User> findById(Integer ID) throws DaoException {
-        return Optional.empty();
+        try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_ID)) {
+            statement.setInt(1, ID);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                String login = resultSet.getString(1);
+                String email = resultSet.getString(2);
+                String lastName = resultSet.getString(3);
+                String firstName = resultSet.getString(4);
+                String surName = resultSet.getString(5);
+                boolean isBlocked = resultSet.getBoolean(6);
+                int roleID = resultSet.getInt(7);
+
+                User user = new User.UserBuilder().
+                        setUserID(ID).
+                        setLogin(login).
+                        setEmail(email).
+                        setLastName(lastName).
+                        setFirstName(firstName).
+                        setSurName(surName).
+                        setBlocked(isBlocked).
+                        setRoleID(roleID).
+                        createUser();
+
+                return Optional.of(user);
+            } else {
+                return Optional.empty();
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_FIND_ID, userID = " + ID, e);
+            throw new DaoException("Failed to execute SQL_FIND_ID, userID = " + ID, e);
+        }
     }
 
     @Override
     public boolean remove(Integer ID) throws DaoException {
-        return false;
+        try (PreparedStatement statement = connection.prepareStatement(SQL_REMOVE_ID)) {
+            statement.setInt(1, ID);
+            return statement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_REMOVE_ID, userID = " + ID, e);
+            throw new DaoException("Failed to execute SQL_REMOVE_ID, userID = " + ID, e);
+        }
     }
 
     @Override
-    public User update(Integer ID, User replacement) throws DaoException {
-        return null;
+    public boolean update(Integer ID, User replacement) throws DaoException {
+        try (PreparedStatement statement = connection.prepareStatement(SQL_UPDATE_ID)) {
+            statement.setString(1, replacement.getLogin());
+            statement.setString(2, replacement.getEmail());
+            statement.setString(3, replacement.getLastName());
+            statement.setString(4, replacement.getFirstName());
+            statement.setString(5, replacement.getSurName());
+            statement.setBoolean(6, replacement.isBlocked());
+            statement.setInt(7, replacement.getRoleID());
+            statement.setInt(8, ID);
+            return statement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_REMOVE_ID, userID = " + ID, e);
+            throw new DaoException("Failed to execute SQL_REMOVE_ID, userID = " + ID, e);
+        }
     }
 
     @Override
-    public Optional<User> findByLogin(String username) throws DaoException {
-        return Optional.empty();
+    public Optional<User> findByLogin(String login) throws DaoException {
+        try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_LOGIN)) {
+            statement.setString(1, login);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                int userID = resultSet.getInt(1);
+                String email = resultSet.getString(2);
+                String lastName = resultSet.getString(3);
+                String firstName = resultSet.getString(4);
+                String surName = resultSet.getString(5);
+                boolean isBlocked = resultSet.getBoolean(6);
+                int roleID = resultSet.getInt(7);
+
+                User user = new User.UserBuilder().
+                        setUserID(userID).
+                        setLogin(login).
+                        setEmail(email).
+                        setLastName(lastName).
+                        setFirstName(firstName).
+                        setSurName(surName).
+                        setBlocked(isBlocked).
+                        setRoleID(roleID).
+                        createUser();
+
+                return Optional.of(user);
+            } else {
+                return Optional.empty();
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_FIND_LOGIN, login = " + login, e);
+            throw new DaoException("Failed to execute SQL_FIND_LOGIN, login = " + login, e);
+        }
     }
 
     @Override
     public Optional<User> findByEmail(String email) throws DaoException {
-        return Optional.empty();
+        try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_EMAIL)) {
+            statement.setString(1, email);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                int userID = resultSet.getInt(1);
+                String login = resultSet.getString(2);
+                String lastName = resultSet.getString(3);
+                String firstName = resultSet.getString(4);
+                String surName = resultSet.getString(5);
+                boolean isBlocked = resultSet.getBoolean(6);
+                int roleID = resultSet.getInt(7);
+
+                User user = new User.UserBuilder().
+                        setUserID(userID).
+                        setLogin(login).
+                        setEmail(email).
+                        setLastName(lastName).
+                        setFirstName(firstName).
+                        setSurName(surName).
+                        setBlocked(isBlocked).
+                        setRoleID(roleID).
+                        createUser();
+
+                return Optional.of(user);
+            } else {
+                return Optional.empty();
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_FIND_EMAIL, email = " + email, e);
+            throw new DaoException("Failed to execute SQL_FIND_EMAIL, email = " + email, e);
+        }
     }
 
     @Override

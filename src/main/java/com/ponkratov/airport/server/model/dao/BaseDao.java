@@ -16,7 +16,7 @@ public abstract class BaseDao<K, T extends Entity> {
 
     public abstract boolean remove(K ID) throws DaoException;
 
-    public abstract T update(K ID, T replacement) throws DaoException;
+    public abstract boolean update(K ID, T replacement) throws DaoException;
 
     protected void setConnection(Connection connection) {
         this.connection = connection;

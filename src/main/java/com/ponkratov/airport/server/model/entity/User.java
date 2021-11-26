@@ -97,40 +97,49 @@ public class User implements Entity{
         private boolean isBlocked;
         private int roleID;
 
-        public void setUserID(int userID) {
+        public UserBuilder setUserID(int userID) {
             this.userID = userID;
+            return this;
         }
 
-        public void setLogin(String login) {
+        public UserBuilder setLogin(String login) {
             this.login = login;
+            return this;
         }
 
-        public void setEmail(String email) {
+        public UserBuilder setEmail(String email) {
             this.email = email;
+            return this;
         }
 
-        public void setLastName(String lastName) {
+        public UserBuilder setLastName(String lastName) {
             this.lastName = lastName;
+            return this;
         }
 
-        public void setFirstName(String firstName) {
+        public UserBuilder setFirstName(String firstName) {
             this.firstName = firstName;
+            return this;
         }
 
-        public void setSurName(String surName) {
+        public UserBuilder setSurName(String surName) {
             this.surName = surName;
+            return this;
         }
 
-        public void setUserPictureLink(String userPictureLink) {
+        public UserBuilder setUserPictureLink(String userPictureLink) {
             this.userPictureLink = userPictureLink;
+            return this;
         }
 
-        public void setBlocked(boolean blocked) {
-            isBlocked = blocked;
+        public UserBuilder setBlocked(boolean blocked) {
+            this.isBlocked = blocked;
+            return this;
         }
 
-        public void setRoleID(int roleID) {
+        public UserBuilder setRoleID(int roleID) {
             this.roleID = roleID;
+            return this;
         }
 
         public User createUser() {

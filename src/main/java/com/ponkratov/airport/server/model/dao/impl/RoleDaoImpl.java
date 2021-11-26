@@ -78,8 +78,8 @@ public class RoleDaoImpl extends RoleDao {
     }
 
     @Override
-    public Role update(Integer ID, Role replacement) throws DaoException {
-        return null;
+    public boolean update(Integer ID, Role replacement) throws DaoException {
+        return false;
     }
 
     @Override
