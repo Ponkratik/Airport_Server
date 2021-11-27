@@ -45,7 +45,7 @@ public class AuthenticateUserCommand implements ActionCommand {
                 return new CommandResult(ResponseStatus.ERROR, "Ошибка аутентификации", null);
             }
         } else {
-            return new CommandResult(ResponseStatus.ERROR, "Ошибка сервера", null);
+            return new CommandResult(ResponseStatus.ERROR, "Ошибка: поля не заполнены/заполнены не должным образом", null);
         }
     }
 }

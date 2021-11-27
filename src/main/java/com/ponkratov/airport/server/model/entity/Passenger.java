@@ -1,5 +1,7 @@
 package com.ponkratov.airport.server.model.entity;
 
+import java.util.Objects;
+
 public class Passenger implements Entity{
     private final int passengerID;
     private final String lastName;
@@ -51,10 +53,10 @@ public class Passenger implements Entity{
                 && identificationNumber.equals(passenger.identificationNumber);
     }
 
-    /*@Override
+    @Override
     public int hashCode() {
-         return 0;
-    }*/
+         return Objects.hash(passengerID, lastName, firstName, surName, identificationNumber);
+    }
 
     public static class PassengerBuilder {
         private int passengerID;
@@ -63,24 +65,29 @@ public class Passenger implements Entity{
         private String surName;
         private String identificationNumber;
 
-        public void setPassengerID(int passengerID) {
+        public PassengerBuilder setPassengerID(int passengerID) {
             this.passengerID = passengerID;
+            return this;
         }
 
-        public void setLastName(String lastName) {
+        public PassengerBuilder setLastName(String lastName) {
             this.lastName = lastName;
+            return this;
         }
 
-        public void setFirstName(String firstName) {
+        public PassengerBuilder setFirstName(String firstName) {
             this.firstName = firstName;
+            return this;
         }
 
-        public void setSurName(String surName) {
+        public PassengerBuilder setSurName(String surName) {
             this.surName = surName;
+            return this;
         }
 
-        public void setIdentificationNumber(String identificationNumber) {
+        public PassengerBuilder setIdentificationNumber(String identificationNumber) {
             this.identificationNumber = identificationNumber;
+            return this;
         }
 
         public Passenger createPassenger() {

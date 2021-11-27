@@ -15,6 +15,8 @@ public abstract class UserDao extends BaseDao<Integer, User> {
 
     public abstract List<User> findByLoginRegexp(String regexp) throws DaoException;
 
+    public abstract List<User> findByNameRegexp(String regexp) throws DaoException;
+
     public abstract boolean create(String login, String password, String email, String lastName, String firstName, String surName, int roleID) throws DaoException;
 
     public abstract String getPassword(int userID) throws DaoException;

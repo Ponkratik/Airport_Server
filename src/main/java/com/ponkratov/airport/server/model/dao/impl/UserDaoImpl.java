@@ -2,7 +2,6 @@ package com.ponkratov.airport.server.model.dao.impl;
 
 import com.ponkratov.airport.server.exception.DaoException;
 import com.ponkratov.airport.server.model.dao.UserDao;
-import com.ponkratov.airport.server.model.entity.Role;
 import com.ponkratov.airport.server.model.entity.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -53,6 +52,32 @@ public class UserDaoImpl extends UserDao {
             WHERE login = ?;
             """;
 
+    private static final String SQL_FIND_LOGIN_REGEXP = """
+            SELECT userID,
+            email,
+            login,
+            lastName,
+            firstName,
+            surName,
+            isBlocked,
+            user.roleID
+            FROM user
+            WHERE login regexp ?;
+            """;
+
+    private static final String SQL_FIND_NAME_REGEXP = """
+            SELECT userID,
+            email,
+            login,
+            lastName,
+            firstName,
+            surName,
+            isBlocked,
+            user.roleID
+            FROM user
+            WHERE CONCAT(lastName, ' ', firstName, ' ', surName) regexp ?;
+            """;
+
     private static final String SQL_FIND_EMAIL = """
             SELECT userID,
             login,
@@ -63,6 +88,18 @@ public class UserDaoImpl extends UserDao {
             user.roleID
             FROM user
             WHERE email = ?;
+            """;
+
+    private static final String SQL_FIND_ROLE = """
+            SELECT userID,
+            login,
+            email,
+            lastName,
+            firstName,
+            surName,
+            isBlocked
+            FROM user
+            WHERE user.roleID = ?;
             """;
 
     private static final String SQL_CREATE_USER = """
@@ -221,8 +258,8 @@ public class UserDaoImpl extends UserDao {
             statement.setInt(8, ID);
             return statement.executeUpdate() > 0;
         } catch (SQLException e) {
-            LOG.error("Failed to execute SQL_REMOVE_ID, userID = " + ID, e);
-            throw new DaoException("Failed to execute SQL_REMOVE_ID, userID = " + ID, e);
+            LOG.error("Failed to execute SQL_UPDATE_ID, userID = " + ID, e);
+            throw new DaoException("Failed to execute SQL_UPDATE_ID, userID = " + ID, e);
         }
     }
 
@@ -298,12 +335,114 @@ public class UserDaoImpl extends UserDao {
 
     @Override
     public List<User> findByRole(int roleID) throws DaoException {
-        return null;
+        List<User> users = new ArrayList<>();
+
+        try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_ROLE)) {
+            statement.setInt(1, roleID);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                int userID = resultSet.getInt(1);
+                String login = resultSet.getString(2);
+                String email = resultSet.getString(3);
+                String lastName = resultSet.getString(4);
+                String firstName = resultSet.getString(5);
+                String surName = resultSet.getString(6);
+                boolean isBlocked = resultSet.getBoolean(7);
+
+                User user = new User.UserBuilder().
+                        setUserID(userID).
+                        setLogin(login).
+                        setEmail(email).
+                        setLastName(lastName).
+                        setFirstName(firstName).
+                        setSurName(surName).
+                        setBlocked(isBlocked).
+                        setRoleID(roleID).
+                        createUser();
+
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_FIND_ROLE, roleID = " + roleID, e);
+            throw new DaoException("Failed to execute SQL_FIND_ROLE, roleID = " + roleID, e);
+        }
+        return users;
     }
 
     @Override
     public List<User> findByLoginRegexp(String regexp) throws DaoException {
-        return null;
+        List<User> users = new ArrayList<>();
+
+        try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_LOGIN_REGEXP)) {
+            statement.setString(1, regexp);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                int userID = resultSet.getInt(1);
+                String login = resultSet.getString(2);
+                String email = resultSet.getString(3);
+                String lastName = resultSet.getString(4);
+                String firstName = resultSet.getString(5);
+                String surName = resultSet.getString(6);
+                boolean isBlocked = resultSet.getBoolean(7);
+                int roleID = resultSet.getInt(8);
+
+                User user = new User.UserBuilder().
+                        setUserID(userID).
+                        setLogin(login).
+                        setEmail(email).
+                        setLastName(lastName).
+                        setFirstName(firstName).
+                        setSurName(surName).
+                        setBlocked(isBlocked).
+                        setRoleID(roleID).
+                        createUser();
+
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_FIND_LOGIN_REGEXP", e);
+            throw new DaoException("Failed to execute SQL_FIND_LOGIN_REGEXP", e);
+        }
+
+        return users;
+    }
+
+    @Override
+    public List<User> findByNameRegexp(String regexp) throws DaoException {
+        List<User> users = new ArrayList<>();
+
+        try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_NAME_REGEXP)) {
+            statement.setString(1, regexp);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                int userID = resultSet.getInt(1);
+                String login = resultSet.getString(2);
+                String email = resultSet.getString(3);
+                String lastName = resultSet.getString(4);
+                String firstName = resultSet.getString(5);
+                String surName = resultSet.getString(6);
+                boolean isBlocked = resultSet.getBoolean(7);
+                int roleID = resultSet.getInt(8);
+
+                User user = new User.UserBuilder().
+                        setUserID(userID).
+                        setLogin(login).
+                        setEmail(email).
+                        setLastName(lastName).
+                        setFirstName(firstName).
+                        setSurName(surName).
+                        setBlocked(isBlocked).
+                        setRoleID(roleID).
+                        createUser();
+
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_FIND_LOGIN_REGEXP", e);
+            throw new DaoException("Failed to execute SQL_FIND_LOGIN_REGEXP", e);
+        }
+
+        return users;
     }
 
     @Override

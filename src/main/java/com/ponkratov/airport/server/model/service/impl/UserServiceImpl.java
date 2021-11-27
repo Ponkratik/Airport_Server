@@ -142,4 +142,58 @@ public class UserServiceImpl implements UserService {
             throw new ServiceException("Failed to find all users.", e);
         }
     }
+
+    @Override
+    public Optional<User> findByEmail(String email) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            Optional<User> queryResult = dao.findByEmail(email);
+            if (queryResult.isPresent()) {
+                User user = queryResult.get();
+                return Optional.of(user);
+            } else {
+                return Optional.empty();
+            }
+        } catch (DaoException e) {
+            LOG.error("Failed to find by email.", e);
+            throw new ServiceException("Failed to find by email.", e);
+        }
+    }
+
+    @Override
+    public List<User> findByRole(int roleID) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            return dao.findByRole(roleID);
+        } catch (DaoException e) {
+            LOG.error("Failed to find all users by role.", e);
+            throw new ServiceException("Failed to find all users by role.", e);
+        }
+    }
+
+    @Override
+    public List<User> findByLoginRegexp(String regexp) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            return dao.findByLoginRegexp(regexp);
+        } catch (DaoException e) {
+            LOG.error("Failed to find all users by login.", e);
+            throw new ServiceException("Failed to find all users by login.", e);
+        }
+    }
+
+    @Override
+    public List<User> findByNameRegexp(String regexp) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            return dao.findByNameRegexp(regexp);
+        } catch (DaoException e) {
+            LOG.error("Failed to find all users by login.", e);
+            throw new ServiceException("Failed to find all users by login.", e);
+        }
+    }
 }

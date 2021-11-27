@@ -33,8 +33,12 @@ public class ChangeUserPasswordCommand implements ActionCommand {
                 if (isApproved) {
                     boolean isEquals = userService.comparePassword(passwordNew, passwordRe);
                     if (isEquals) {
-                        userService.updatePassword(UserThread.getUserID(), passwordNew);
-                        return new CommandResult(ResponseStatus.OK, "Пароль успешно изменён", null);
+                        boolean isExecuted = userService.updatePassword(UserThread.getUserID(), passwordNew);
+                        if (isExecuted) {
+                            return new CommandResult(ResponseStatus.OK, "Пароль успешно изменён", null);
+                        } else {
+                            return new CommandResult(ResponseStatus.ERROR, "Ошибка смены пароля", null);
+                        }
                     } else {
                         return new CommandResult(ResponseStatus.ERROR, "Новые пароли не совпадают", null);
                     }
@@ -42,7 +46,7 @@ public class ChangeUserPasswordCommand implements ActionCommand {
                     return new CommandResult(ResponseStatus.ERROR, "Введён неверный текущий пароль", null);
                 }
             } catch (ServiceException e) {
-                LOG.error("Authentication failed", e);
+                LOG.error("Password change failed", e);
                 return new CommandResult(ResponseStatus.ERROR, "Ошибка смены пароля", null);
             }
         } else {
