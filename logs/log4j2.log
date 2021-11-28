@@ -985,3 +985,51 @@ java.net.SocketException: Connection reset
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
 	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:60) [classes/:?]
 	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-28 14:01:24,241 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1058 connected
+2021-11-28 14:01:28,450 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:60) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-28 14:02:04,966 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1089 connected
+2021-11-28 14:02:30,686 ERROR c.p.a.s.c.u.UserThread [Thread-5] Can not read message from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:60) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-11-28 15:48:50,068 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:13729 connected
+2021-11-28 15:48:51,545 ERROR c.p.a.s.c.u.UserThread [Thread-4] Can not read message from client.
+java.net.SocketException: Connection reset
+	at sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[?:?]
+	at sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:966) ~[?:?]
+	at java.net.Socket$SocketInputStream.read(Socket.java:961) ~[?:?]
+	at java.io.ObjectInputStream$PeekInputStream.peek(ObjectInputStream.java:2853) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peek(ObjectInputStream.java:3180) ~[?:?]
+	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:3190) ~[?:?]
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1693) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:514) ~[?:?]
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:472) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:60) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]

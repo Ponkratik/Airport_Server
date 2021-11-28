@@ -13,7 +13,7 @@ public class User implements Entity{
     private final boolean isBlocked;
     private final int roleID;
 
-    public User(int userID, String login, String email, String lastName, String firstName, String surName, String userPictureLink, boolean isBlocked, int roleID) {
+    private User(int userID, String login, String email, String lastName, String firstName, String surName, String userPictureLink, boolean isBlocked, int roleID) {
         this.userID = userID;
         this.login = login;
         this.email = email;
