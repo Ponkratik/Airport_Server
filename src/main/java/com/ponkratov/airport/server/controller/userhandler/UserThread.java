@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.net.SocketException;
 
 public class UserThread implements Runnable{
     private static final Logger LOG = LogManager.getLogger();
@@ -62,8 +63,13 @@ public class UserThread implements Runnable{
                 commandResult = command.execute(request.getRequestParams());
                 oos.writeObject(objectMapper.writeValueAsString(commandResult));
             } catch (IOException e) {
-                LOG.error("Can not read message from client.", e);
-                throw new RuntimeException("Can not read message from client.", e);
+                if (e.getMessage().equals("Connection reset")) {
+                    LOG.info("Client " + s.getInetAddress() + ":" + s.getPort() + " disconnected");
+                    break;
+                } else {
+                    LOG.error("Can not read message from client.", e);
+                    throw new RuntimeException("Can not read message from client.", e);
+                }
             } catch (ClassNotFoundException e) {
                 LOG.error("Request class not found.", e);
                 throw new RuntimeException("Request class not found.", e);

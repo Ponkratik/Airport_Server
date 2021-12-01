@@ -38,6 +38,19 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public boolean updateUser(int userID, User user) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            boolean isUpdated = dao.update(userID, user);
+            return isUpdated;
+        } catch (DaoException e) {
+            LOG.error("Failed to update user, userID = " + userID, e);
+            throw new ServiceException("Failed to update user, userID = " + userID, e);
+        }
+    }
+
 
     @Override
     public Optional<User> authenticateByLogin(String login, String password) throws ServiceException{

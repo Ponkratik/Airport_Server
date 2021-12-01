@@ -14,6 +14,10 @@ public class CommandProvider {
         commands.put(CommandType.CHANGEPASSWORD, new ChangeUserPasswordCommand());
         commands.put(CommandType.RESTOREPASSWORD, new RestoreUserPasswordCommand());
         commands.put(CommandType.REGISTER, new RegisterUserCommand());
+        commands.put(CommandType.UPDATEUSER, new UpdateUserCommand());
+        commands.put(CommandType.FINDALLROLES, new FindAllRolesCommand());
+        commands.put(CommandType.FINDROLEBYID, new FindRoleByIDCommand());
+        commands.put(CommandType.FINDROLEBYNAME, new FindRoleByNameCommand());
     }
 
     public static CommandProvider getInstance() {

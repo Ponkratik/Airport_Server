@@ -10,6 +10,7 @@ public enum CommandType {
     RESTOREPASSWORD,
     BLOCKUSER,
     UPDATEUSERROLE,
+    UPDATEUSER,
 
     FINDALLROLES,
     FINDROLEBYID,
