@@ -15,9 +15,18 @@ public class CommandProvider {
         commands.put(CommandType.RESTOREPASSWORD, new RestoreUserPasswordCommand());
         commands.put(CommandType.REGISTER, new RegisterUserCommand());
         commands.put(CommandType.UPDATEUSER, new UpdateUserCommand());
+        commands.put(CommandType.FINDUSERSBYNAMEREGEXP, new FindUsersByNameRegexpCommand());
+        commands.put(CommandType.FINDUSERSBYLOGINREGEXP, new FindUsersByLoginRegexpCommand());
+        commands.put(CommandType.FINDUSERSBYROLE, new FindUsersByRoleCommand());
+        commands.put(CommandType.FINDUSERBYEMAIL, new FindUserByEmailCommand());
         commands.put(CommandType.FINDALLROLES, new FindAllRolesCommand());
         commands.put(CommandType.FINDROLEBYID, new FindRoleByIDCommand());
         commands.put(CommandType.FINDROLEBYNAME, new FindRoleByNameCommand());
+        commands.put(CommandType.FINDALLPLANES, new FindAllPlanesCommand());
+        commands.put(CommandType.CREATEPLANE, new CreatePlaneCommand());
+        commands.put(CommandType.UPDATEPLANE, new UpdatePlaneCommand());
+        commands.put(CommandType.FINDPLANEBYNUMBER, new FindPlaneByNumberCommand());
+        commands.put(CommandType.FINDPLANESBYMODELREGEXP, new FindPlanesByModelRegexpCommand());
     }
 
     public static CommandProvider getInstance() {

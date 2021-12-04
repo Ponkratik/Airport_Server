@@ -1,6 +1,7 @@
 package com.ponkratov.airport.server.model.dao.impl;
 
 import com.ponkratov.airport.server.exception.DaoException;
+import com.ponkratov.airport.server.exception.ServiceException;
 import com.ponkratov.airport.server.model.dao.PlaneDao;
 import com.ponkratov.airport.server.model.entity.Plane;
 import org.apache.logging.log4j.LogManager;
@@ -38,6 +39,31 @@ public class PlaneDaoImpl extends PlaneDao {
             planeNumber = ?,
             seatsQuantity = ?
             WHERE planeID = ?
+            """;
+
+    private static final String SQL_FIND_NUMBER = """            
+            SELECT planeID,
+            planeModel,
+            seatsQuantity
+            FROM plane
+            WHERE planeNumber = ?;
+            """;
+
+    private static final String SQL_FIND_MODEL_REGEXP = """            
+            SELECT planeID,
+            planeModel,
+            planeNumber,
+            seatsQuantity
+            FROM plane
+            WHERE planeModel regexp ?;
+            """;
+
+    private static final String SQL_CREATE = """            
+            INSERT INTO plane
+            (planeModel,
+            planeNumber,
+            seatsQuantity)
+            VALUES (?, ?, ?);
             """;
 
     @Override
@@ -107,6 +133,71 @@ public class PlaneDaoImpl extends PlaneDao {
         } catch (SQLException e) {
             LOG.error("Failed to execute SQL_UPDATE_ID, planeID = " + ID, e);
             throw new DaoException("Failed to execute SQL_UPDATE_ID, planeID = " + ID, e);
+        }
+    }
+
+    @Override
+    public boolean createPlane(String planeModel, String planeNumber, Integer seatsQuantity) throws DaoException {
+        try (PreparedStatement statement = connection.prepareStatement(SQL_CREATE)) {
+            statement.setString(1, planeModel);
+            statement.setString(2, planeNumber);
+            statement.setInt(3, seatsQuantity);
+            return statement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_CREATE", e);
+            throw new DaoException("Failed to execute SQL_CREATE", e);
+        }
+    }
+
+    @Override
+    public List<Plane> findByModelRegexp(String regexp) throws DaoException {
+        List<Plane> planes = new ArrayList<>();
+        try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_MODEL_REGEXP)) {
+            statement.setString(1, regexp);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                int planeID = resultSet.getInt(1);
+                String planeModel = resultSet.getString(2);
+                String planeNumber = resultSet.getString(3);
+                int seatsQuantity = resultSet.getInt(4);
+                Plane plane = new Plane.PlaneBuilder().
+                        setPlaneID(planeID).
+                        setPlaneModel(planeModel).
+                        setPlaneNumber(planeNumber).
+                        setSeatsQuantity(seatsQuantity).
+                        createPlane();
+                planes.add(plane);
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_FIND_MODEL_REGEXP", e);
+            throw new DaoException("Failed to execute SQL_FIND_MODEL_REGEXP", e);
+        }
+
+        return planes;
+    }
+
+    @Override
+    public Optional<Plane> findByNumber(String number) throws DaoException {
+        try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_NUMBER)) {
+            statement.setString(1, number);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                int planeID = resultSet.getInt(1);
+                String planeModel = resultSet.getString(2);
+                int seatsQuantity = resultSet.getInt(3);
+                Plane plane = new Plane.PlaneBuilder().
+                        setPlaneID(planeID).
+                        setPlaneModel(planeModel).
+                        setPlaneNumber(number).
+                        setSeatsQuantity(seatsQuantity).
+                        createPlane();
+                return Optional.of(plane);
+            } else {
+                return Optional.empty();
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_FIND_NUMBER, planeNumber = " + number, e);
+            throw new DaoException("Failed to execute SQL_FIND_NUMBER, planeNumber = " + number, e);
         }
     }
 }

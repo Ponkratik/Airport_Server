@@ -19,6 +19,7 @@ public interface UserService {
     boolean updateRole(int userID, int newRole) throws ServiceException;
     List<User> findAll() throws ServiceException;
     Optional<User> findByEmail(String email) throws ServiceException;
+    Optional<User> findByLogin(String login) throws ServiceException;
     List<User> findByRole(int roleID) throws ServiceException;
     List<User> findByLoginRegexp(String regexp) throws ServiceException;
     List<User> findByNameRegexp(String regexp) throws ServiceException;

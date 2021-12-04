@@ -6,6 +6,8 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,16 +16,14 @@ import java.util.Properties;
 public class ConnectionFactory {
     private static final Logger LOG = LogManager.getLogger();
 
-    private static final String DATABASE_PROPERTIES = "database.properties";
+    private static final String DATABASE_PROPERTIES = "src/main/java/com/ponkratov/airport/server/model/pool/database.properties";
     private static final String DATABASE_URL;
     private static final String DATABASE_USERNAME;
     private static final String DATABASE_PASSWORD;
 
     static {
-        //TODO: Connect DB properties file
-        /*Properties databaseProperties = new Properties();
-        InputStream propertiesFile = ConnectionFactory.class.getResourceAsStream(DATABASE_PROPERTIES);
-        try {
+        Properties databaseProperties = new Properties();
+        try (InputStream propertiesFile = Files.newInputStream(Paths.get(DATABASE_PROPERTIES))) {
             databaseProperties.load(propertiesFile);
         } catch (IOException e) {
             LOG.fatal("Failed to load database properties.", e);
@@ -32,11 +32,7 @@ public class ConnectionFactory {
 
         DATABASE_URL = databaseProperties.getProperty("url");
         DATABASE_USERNAME = databaseProperties.getProperty("username");
-        DATABASE_PASSWORD = databaseProperties.getProperty("password");*/
-
-        DATABASE_URL = "jdbc:mysql://localhost:3306/airportdb";
-        DATABASE_USERNAME = "root";
-        DATABASE_PASSWORD = "123456";
+        DATABASE_PASSWORD = databaseProperties.getProperty("password");
 
         try {
             DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());

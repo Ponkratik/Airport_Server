@@ -96,7 +96,7 @@ public class UserServiceImpl implements UserService {
         UserDao dao = new UserDaoImpl();
         try (EntityTransaction transaction = new EntityTransaction()) {
             transaction.initAction(dao);
-            boolean isUpdated = dao.updatePassword(userID, password);
+            boolean isUpdated = dao.updatePassword(userID, PasswordEncryptor.encrypt(password));
             return isUpdated;
         } catch (DaoException e) {
             LOG.error("Failed to change user password, userID = " + userID, e);
@@ -171,6 +171,24 @@ public class UserServiceImpl implements UserService {
         } catch (DaoException e) {
             LOG.error("Failed to find by email.", e);
             throw new ServiceException("Failed to find by email.", e);
+        }
+    }
+
+    @Override
+    public Optional<User> findByLogin(String login) throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            Optional<User> queryResult = dao.findByLogin(login);
+            if (queryResult.isPresent()) {
+                User user = queryResult.get();
+                return Optional.of(user);
+            } else {
+                return Optional.empty();
+            }
+        } catch (DaoException e) {
+            LOG.error("Failed to find by login.", e);
+            throw new ServiceException("Failed to find by login.", e);
         }
     }
 

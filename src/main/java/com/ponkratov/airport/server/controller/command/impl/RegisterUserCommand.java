@@ -6,12 +6,14 @@ import com.ponkratov.airport.server.controller.command.CommandResult;
 import com.ponkratov.airport.server.controller.command.RequestAttribute;
 import com.ponkratov.airport.server.controller.command.ResponseStatus;
 import com.ponkratov.airport.server.exception.ServiceException;
+import com.ponkratov.airport.server.model.entity.User;
 import com.ponkratov.airport.server.model.service.UserService;
 import com.ponkratov.airport.server.model.service.impl.UserServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Map;
+import java.util.Optional;
 
 public class RegisterUserCommand implements ActionCommand {
     private static final Logger LOG = LogManager.getLogger();
@@ -28,11 +30,21 @@ public class RegisterUserCommand implements ActionCommand {
 
         UserService userService = UserServiceImpl.getInstance();
         try {
-            boolean isCreated = userService.createUser(userLogin, userPass, userEmail, userLastName, userFirstName, userSurName, userRoleID);
-            if (isCreated) {
-                return new CommandResult(ResponseStatus.OK, "Пользователь успешно создан", null);
+            Optional<User> queryResult = userService.findByLogin(userLogin);
+            if (queryResult.isPresent()) {
+                return new CommandResult(ResponseStatus.ERROR, "Пользователь с таким логином уже существует", null);
             } else {
-                return new CommandResult(ResponseStatus.ERROR, "Не удалось создать пользователя", null);
+                Optional<User> queryResult1 = userService.findByEmail(userEmail);
+                if (queryResult1.isPresent()) {
+                    return new CommandResult(ResponseStatus.ERROR, "Пользователь с таким эл.адресом уже существует", null);
+                } else {
+                    boolean isCreated = userService.createUser(userLogin, userPass, userEmail, userLastName, userFirstName, userSurName, userRoleID);
+                    if (isCreated) {
+                        return new CommandResult(ResponseStatus.OK, "Пользователь успешно создан", null);
+                    } else {
+                        return new CommandResult(ResponseStatus.ERROR, "Не удалось создать пользователя", null);
+                    }
+                }
             }
         } catch (ServiceException e) {
             LOG.error("Failed to create user, userLogin = " + userLogin, e);

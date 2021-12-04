@@ -54,8 +54,8 @@ public class UserDaoImpl extends UserDao {
 
     private static final String SQL_FIND_LOGIN_REGEXP = """
             SELECT userID,
-            email,
             login,
+            email,
             lastName,
             firstName,
             surName,
@@ -67,8 +67,8 @@ public class UserDaoImpl extends UserDao {
 
     private static final String SQL_FIND_NAME_REGEXP = """
             SELECT userID,
-            email,
             login,
+            email,
             lastName,
             firstName,
             surName,
@@ -438,8 +438,8 @@ public class UserDaoImpl extends UserDao {
                 users.add(user);
             }
         } catch (SQLException e) {
-            LOG.error("Failed to execute SQL_FIND_LOGIN_REGEXP", e);
-            throw new DaoException("Failed to execute SQL_FIND_LOGIN_REGEXP", e);
+            LOG.error("Failed to execute SQL_FIND_NAME_REGEXP", e);
+            throw new DaoException("Failed to execute SQL_FIND_NAME_REGEXP", e);
         }
 
         return users;

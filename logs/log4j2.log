@@ -12,3 +12,209 @@
 2021-12-01 23:00:32,257 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:1050 disconnected
 2021-12-01 23:40:24,216 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1034 connected
 2021-12-01 23:40:56,462 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1034 disconnected
+2021-12-02 16:00:19,428 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1117 connected
+2021-12-02 21:38:31,866 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:10779 connected
+2021-12-02 21:39:03,811 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:10779 disconnected
+2021-12-02 22:05:10,509 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1039 connected
+2021-12-02 22:18:34,370 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1035 connected
+2021-12-02 22:19:21,687 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1035 disconnected
+2021-12-02 22:35:25,185 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1058 connected
+2021-12-02 22:38:37,649 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1058 disconnected
+2021-12-02 22:45:04,296 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1031 connected
+2021-12-02 22:47:12,918 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1031 disconnected
+2021-12-02 23:03:49,106 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1035 connected
+2021-12-02 23:07:17,842 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1035 disconnected
+2021-12-02 23:09:41,265 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1031 connected
+2021-12-02 23:10:03,115 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1031 disconnected
+2021-12-02 23:11:26,191 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:7352 connected
+2021-12-02 23:11:43,606 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:7352 disconnected
+2021-12-02 23:11:46,216 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:8988 connected
+2021-12-02 23:12:20,331 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:8988 disconnected
+2021-12-02 23:12:22,572 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:29441 connected
+2021-12-02 23:12:43,639 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:29441 disconnected
+2021-12-02 23:12:45,635 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:29445 connected
+2021-12-02 23:13:33,965 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:29445 disconnected
+2021-12-02 23:15:54,642 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:9234 connected
+2021-12-02 23:17:06,103 FATAL c.p.a.s.c.u.UserWaiter [Thread-5] Can not create user thread.
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:555) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:544) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:643) ~[?:?]
+	at java.net.ServerSocket.bind(ServerSocket.java:388) ~[?:?]
+	at java.net.ServerSocket.<init>(ServerSocket.java:274) ~[?:?]
+	at java.net.ServerSocket.<init>(ServerSocket.java:167) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserWaiter.run(UserWaiter.java:13) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-12-02 23:17:30,416 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:32995 connected
+2021-12-02 23:18:56,591 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:33011 connected
+2021-12-02 23:19:45,853 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:7921 connected
+2021-12-02 23:20:00,030 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:7921 disconnected
+2021-12-02 23:20:59,429 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:7933 connected
+2021-12-02 23:21:26,026 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:7933 disconnected
+2021-12-02 23:53:11,262 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1042 connected
+2021-12-02 23:53:13,769 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1042 disconnected
+2021-12-02 23:55:40,308 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1049 connected
+2021-12-02 23:55:54,929 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1049 disconnected
+2021-12-02 23:56:27,441 FATAL c.p.a.s.c.u.UserWaiter [Thread-8] Can not create user thread.
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:555) ~[?:?]
+	at sun.nio.ch.Net.bind(Net.java:544) ~[?:?]
+	at sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:643) ~[?:?]
+	at java.net.ServerSocket.bind(ServerSocket.java:388) ~[?:?]
+	at java.net.ServerSocket.<init>(ServerSocket.java:274) ~[?:?]
+	at java.net.ServerSocket.<init>(ServerSocket.java:167) ~[?:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserWaiter.run(UserWaiter.java:13) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-12-04 15:27:27,687 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1121 connected
+2021-12-04 15:29:40,244 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1121 disconnected
+2021-12-04 15:32:05,334 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1133 connected
+2021-12-04 15:32:07,920 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1133 disconnected
+2021-12-04 15:32:12,698 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1137 connected
+2021-12-04 15:33:42,202 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1137 disconnected
+2021-12-04 15:37:17,510 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1143 connected
+2021-12-04 15:37:42,441 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1143 disconnected
+2021-12-04 15:38:22,110 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:1148 connected
+2021-12-04 15:38:35,317 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:1148 disconnected
+2021-12-04 15:41:21,477 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:1153 connected
+2021-12-04 15:41:31,793 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:1153 disconnected
+2021-12-04 15:41:36,454 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:1157 connected
+2021-12-04 15:41:50,647 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:1157 disconnected
+2021-12-04 15:42:29,499 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:1161 connected
+2021-12-04 15:42:33,394 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:1161 disconnected
+2021-12-04 15:43:23,238 INFO c.p.a.s.c.u.UserThread [Thread-12] Client /127.0.0.1:1166 connected
+2021-12-04 15:43:44,304 INFO c.p.a.s.c.u.UserThread [Thread-12] Client /127.0.0.1:1166 disconnected
+2021-12-04 18:08:08,187 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1356 connected
+2021-12-04 18:08:34,815 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1356 disconnected
+2021-12-04 18:12:34,322 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:17087 connected
+2021-12-04 18:12:53,401 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:17087 disconnected
+2021-12-04 18:14:36,465 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1046 connected
+2021-12-04 18:15:12,188 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1046 disconnected
+2021-12-04 18:15:24,562 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1060 connected
+2021-12-04 18:15:34,013 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1060 disconnected
+2021-12-04 18:15:53,168 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:1065 connected
+2021-12-04 18:16:33,522 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:1065 disconnected
+2021-12-04 18:16:36,321 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:1073 connected
+2021-12-04 18:16:47,874 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:1073 disconnected
+2021-12-04 18:19:39,465 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:30209 connected
+2021-12-04 18:19:58,080 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:30209 disconnected
+2021-12-04 18:21:56,618 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:30214 connected
+2021-12-04 18:22:16,779 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:30214 disconnected
+2021-12-04 18:23:49,318 INFO c.p.a.s.c.u.UserThread [Thread-12] Client /127.0.0.1:30221 connected
+2021-12-04 18:23:58,825 INFO c.p.a.s.c.u.UserThread [Thread-12] Client /127.0.0.1:30221 disconnected
+2021-12-04 18:24:20,007 INFO c.p.a.s.c.u.UserThread [Thread-13] Client /127.0.0.1:30225 connected
+2021-12-04 18:24:28,199 INFO c.p.a.s.c.u.UserThread [Thread-13] Client /127.0.0.1:30225 disconnected
+2021-12-04 18:28:20,951 INFO c.p.a.s.c.u.UserThread [Thread-14] Client /127.0.0.1:30232 connected
+2021-12-04 18:29:07,274 INFO c.p.a.s.c.u.UserThread [Thread-14] Client /127.0.0.1:30232 disconnected
+2021-12-04 18:30:59,381 INFO c.p.a.s.c.u.UserThread [Thread-15] Client /127.0.0.1:30223 connected
+2021-12-04 18:32:32,292 INFO c.p.a.s.c.u.UserThread [Thread-15] Client /127.0.0.1:30223 disconnected
+2021-12-04 18:37:34,102 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:16003 connected
+2021-12-04 18:40:58,944 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:5937 connected
+2021-12-04 18:43:05,688 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:5949 connected
+2021-12-04 18:43:10,845 FATAL c.p.a.s.m.p.ConnectionFactory [Thread-4] Failed to load database properties.
+java.nio.file.NoSuchFileException: database.properties
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?]
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:380) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:432) ~[?:?]
+	at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422) ~[?:?]
+	at java.nio.file.Files.newInputStream(Files.java:160) ~[?:?]
+	at com.ponkratov.airport.server.model.pool.ConnectionFactory.<clinit>(ConnectionFactory.java:27) [classes/:?]
+	at com.ponkratov.airport.server.model.pool.CustomConnectionPool.<init>(CustomConnectionPool.java:30) [classes/:?]
+	at com.ponkratov.airport.server.model.pool.CustomConnectionPool.getInstance(CustomConnectionPool.java:49) [classes/:?]
+	at com.ponkratov.airport.server.model.dao.EntityTransaction.initAction(EntityTransaction.java:21) [classes/:?]
+	at com.ponkratov.airport.server.model.service.impl.UserServiceImpl.authenticateByLogin(UserServiceImpl.java:59) [classes/:?]
+	at com.ponkratov.airport.server.controller.command.impl.AuthenticateUserCommand.execute(AuthenticateUserCommand.java:34) [classes/:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:63) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-12-04 18:44:48,530 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1038 connected
+2021-12-04 18:45:07,085 FATAL c.p.a.s.m.p.ConnectionFactory [Thread-4] Failed to load database properties.
+java.nio.file.NoSuchFileException: database.properties
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?]
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:380) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:432) ~[?:?]
+	at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422) ~[?:?]
+	at java.nio.file.Files.newInputStream(Files.java:160) ~[?:?]
+	at com.ponkratov.airport.server.model.pool.ConnectionFactory.<clinit>(ConnectionFactory.java:27) [classes/:?]
+	at com.ponkratov.airport.server.model.pool.CustomConnectionPool.<init>(CustomConnectionPool.java:30) [classes/:?]
+	at com.ponkratov.airport.server.model.pool.CustomConnectionPool.getInstance(CustomConnectionPool.java:49) [classes/:?]
+	at com.ponkratov.airport.server.model.dao.EntityTransaction.initAction(EntityTransaction.java:21) [classes/:?]
+	at com.ponkratov.airport.server.model.service.impl.UserServiceImpl.authenticateByLogin(UserServiceImpl.java:59) [classes/:?]
+	at com.ponkratov.airport.server.controller.command.impl.AuthenticateUserCommand.execute(AuthenticateUserCommand.java:34) [classes/:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:63) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-12-04 18:46:10,639 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1047 connected
+2021-12-04 18:47:21,463 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1061 connected
+2021-12-04 18:47:26,688 FATAL c.p.a.s.m.p.ConnectionFactory [Thread-4] Failed to load database properties.
+java.nio.file.NoSuchFileException: \database.properties
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?]
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:380) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:432) ~[?:?]
+	at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422) ~[?:?]
+	at java.nio.file.Files.newInputStream(Files.java:160) ~[?:?]
+	at com.ponkratov.airport.server.model.pool.ConnectionFactory.<clinit>(ConnectionFactory.java:27) [classes/:?]
+	at com.ponkratov.airport.server.model.pool.CustomConnectionPool.<init>(CustomConnectionPool.java:30) [classes/:?]
+	at com.ponkratov.airport.server.model.pool.CustomConnectionPool.getInstance(CustomConnectionPool.java:49) [classes/:?]
+	at com.ponkratov.airport.server.model.dao.EntityTransaction.initAction(EntityTransaction.java:21) [classes/:?]
+	at com.ponkratov.airport.server.model.service.impl.UserServiceImpl.authenticateByLogin(UserServiceImpl.java:59) [classes/:?]
+	at com.ponkratov.airport.server.controller.command.impl.AuthenticateUserCommand.execute(AuthenticateUserCommand.java:34) [classes/:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:63) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-12-04 18:48:20,447 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1073 connected
+2021-12-04 18:48:33,687 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1073 disconnected
+2021-12-04 18:53:58,248 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:32592 connected
+2021-12-04 18:54:13,375 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:32592 disconnected
+2021-12-04 19:29:32,849 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:3241 connected
+2021-12-04 19:29:56,327 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:3241 disconnected
+2021-12-04 19:30:06,233 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:3245 connected
+2021-12-04 19:30:23,031 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:3245 disconnected
+2021-12-04 19:30:55,863 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:3252 connected
+2021-12-04 19:31:11,725 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:3252 disconnected
+2021-12-04 19:32:24,351 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:3259 connected
+2021-12-04 19:36:54,518 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:3259 disconnected
+2021-12-04 19:45:22,082 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:1040 connected
+2021-12-04 19:45:44,062 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:1040 disconnected
+2021-12-04 19:45:46,663 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:10736 connected
+2021-12-04 19:46:19,774 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:10736 disconnected
+2021-12-04 19:46:23,918 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:10740 connected
+2021-12-04 19:46:46,062 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:10740 disconnected
+2021-12-04 19:50:55,067 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1043 connected
+2021-12-04 19:51:25,562 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1043 disconnected
+2021-12-04 19:51:37,242 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1051 connected
+2021-12-04 19:52:30,609 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1051 disconnected
+2021-12-04 21:55:21,805 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1194 connected
+2021-12-04 21:55:31,070 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1194 disconnected
+2021-12-04 21:55:47,817 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1198 connected
+2021-12-04 21:56:11,390 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1198 disconnected
+2021-12-04 23:47:51,033 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1042 connected
+2021-12-04 23:48:07,656 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1042 disconnected
+2021-12-04 23:49:34,509 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:14518 connected
+2021-12-04 23:57:24,837 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8691 connected
+2021-12-04 23:58:33,653 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8691 disconnected
+2021-12-04 23:58:47,122 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1037 connected
+2021-12-04 23:59:00,698 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1037 disconnected
+2021-12-04 23:59:35,206 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:3432 connected
+2021-12-05 00:01:02,883 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:3432 disconnected
+2021-12-05 00:02:00,096 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:8570 connected
+2021-12-05 00:02:40,815 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:8570 disconnected
+2021-12-05 00:03:53,946 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:1035 connected
+2021-12-05 00:04:17,139 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:1035 disconnected
+2021-12-05 00:04:45,184 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:1036 connected
+2021-12-05 00:09:52,217 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:22152 connected
+2021-12-05 00:10:49,432 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:22152 disconnected
+2021-12-05 00:11:46,601 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1033 connected
+2021-12-05 00:21:50,137 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:25409 connected
+2021-12-05 00:22:37,646 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:25409 disconnected
+2021-12-05 00:24:41,719 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:24655 connected
+2021-12-05 00:25:41,324 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:24655 disconnected
+2021-12-05 00:26:22,820 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:26387 connected
+2021-12-05 00:26:49,207 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:26387 disconnected

@@ -2,6 +2,7 @@ package com.ponkratov.airport.server.view;
 
 import com.ponkratov.airport.server.controller.userhandler.UserThread;
 import com.ponkratov.airport.server.controller.userhandler.UserWaiter;
+import com.ponkratov.airport.server.model.pool.CustomConnectionPool;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -25,6 +26,7 @@ public class ServerController {
             startButton.setText("Stop");
         } else {
             UserWaiter.stopServer();
+
             welcomeText.setText("Server stopped");
             startButton.setText("Start");
         }
