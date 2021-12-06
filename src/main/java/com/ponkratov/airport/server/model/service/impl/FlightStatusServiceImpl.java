@@ -20,7 +20,7 @@ public class FlightStatusServiceImpl implements FlightStatusService {
     private FlightStatusServiceImpl() {
     }
 
-    private static FlightStatusServiceImpl getInstance() {
+    public static FlightStatusServiceImpl getInstance() {
         return instance;
     }
 

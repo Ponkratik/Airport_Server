@@ -50,6 +50,18 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
+    public List<Flight> findDepArrFlights(boolean isArr) throws ServiceException {
+        FlightDao dao = new FlightDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            return dao.findDepArrFlights(isArr);
+        } catch (DaoException e) {
+            LOG.error("Failed to find dep/arr fights, isArr = " + isArr, e);
+            throw new ServiceException("Failed to find dep/arr fights, isArr = " + isArr, e);
+        }
+    }
+
+    @Override
     public Optional<Flight> findByID(int flightID) throws ServiceException {
         FlightDao dao = new FlightDaoImpl();
         try (EntityTransaction transaction = new EntityTransaction()) {
@@ -76,6 +88,18 @@ public class FlightServiceImpl implements FlightService {
         } catch (DaoException e) {
             LOG.error("Failed to update flightStatus, flightID = " + flightID, e);
             throw new ServiceException("Failed to update flightStatus, flightID = " + flightID, e);
+        }
+    }
+
+    @Override
+    public boolean updateFlight(int flightID, Flight replacement) throws ServiceException {
+        FlightDao dao = new FlightDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            return dao.update(flightID, replacement);
+        } catch (DaoException e) {
+            LOG.error("Failed to update flight, flightID = " + flightID, e);
+            throw new ServiceException("Failed to update flight, flightID = " + flightID, e);
         }
     }
 

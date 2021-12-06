@@ -25,7 +25,19 @@ public class FlightDaoImpl extends FlightDao {
             isArrival,
             planeID,
             flightStatusID
+            FROM flight;
+            """;
+
+    private static final String SQL_FIND_DEP_ARR = """
+            SELECT flightID,
+            depTime,
+            arrTime,
+            IATACode,
+            isArrival,
+            planeID,
+            flightStatusID
             FROM flight
+            WHERE isArrival = ?;
             """;
 
     private static final String SQL_FIND_ID = """
@@ -36,10 +48,18 @@ public class FlightDaoImpl extends FlightDao {
             planeID,
             flightStatusID
             FROM flight
-            WHERE flightID = ?
+            WHERE flightID = ?;
             """;
 
     private static final String SQL_UPDATE_ID = """
+            UPDATE flight
+            SET depTime = ?,
+            arrTime = ?,
+            IATACode = ?,
+            isArrival = ?,
+            planeID = ?,
+            flightStatusID = ?
+            WHERE flightID = ?;
             """;
 
     private static final String SQL_CREATE = """
@@ -95,6 +115,42 @@ public class FlightDaoImpl extends FlightDao {
     }
 
     @Override
+    public List<Flight> findDepArrFlights(boolean isArr) throws DaoException {
+        List<Flight> flights = new ArrayList<>();
+
+        try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_DEP_ARR)) {
+            statement.setBoolean(1, isArr);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                int flightID = resultSet.getInt(1);
+                Timestamp depTime = resultSet.getTimestamp(2);
+                Timestamp arrTime = resultSet.getTimestamp(3);
+                String IATACode = resultSet.getString(4);
+                boolean isArrival = resultSet.getBoolean(5);
+                int planeID = resultSet.getInt(6);
+                int flightStatusID = resultSet.getInt(7);
+
+                Flight flight = new Flight.FlightBuilder()
+                        .setFlightID(flightID)
+                        .setDepTime(arrTime)
+                        .setArrTime(arrTime)
+                        .setIATACode(IATACode)
+                        .setArrival(isArrival)
+                        .setPlaneID(planeID)
+                        .setFlightStatusID(flightStatusID)
+                        .createFlight();
+
+                flights.add(flight);
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_FIND_DEP_ARR", e);
+            throw new DaoException("Failed to execute SQL_FIND_DEP_ARR", e);
+        }
+
+        return flights;
+    }
+
+    @Override
     public Optional<Flight> findById(Integer ID) throws DaoException {
         try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_ID)) {
             statement.setInt(1, ID);
@@ -133,7 +189,19 @@ public class FlightDaoImpl extends FlightDao {
 
     @Override
     public boolean update(Integer ID, Flight replacement) throws DaoException {
-        return false;
+        try (PreparedStatement statement = connection.prepareStatement(SQL_UPDATE_ID)) {
+            statement.setTimestamp(1, replacement.getDepTime());
+            statement.setTimestamp(2, replacement.getArrTime());
+            statement.setString(3, replacement.getIATACode());
+            statement.setBoolean(4, replacement.isArrival());
+            statement.setInt(5, replacement.getPlaneID());
+            statement.setInt(6, replacement.getFlightStatusID());
+            statement.setInt(7, ID);
+            return statement.executeUpdate() > 0;
+        }  catch (SQLException e) {
+            LOG.error("Failed to execute SQL_UPDATE_ID, flightID = " + ID, e);
+            throw new DaoException("Failed to execute SQL_UPDATE_ID, flightID = " + ID, e);
+        }
     }
 
     @Override
