@@ -39,6 +39,9 @@ public enum CommandType {
 
     FINDALLAIRPORTS,
 
+    FINDTEAMBYFLIGHTID,
+    UPDATETEAM,
+
     DEFAULT;
     //TODO: Сделать команду для DEFAULT
 

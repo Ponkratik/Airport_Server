@@ -26,7 +26,8 @@ public class FindPlaneByIDCommand implements ActionCommand {
         try {
             Optional<Plane> result = service.findByID(planeID);
             if (result.isPresent()) {
-                return new CommandResult(ResponseStatus.OK, "Успех", new ObjectMapper().writeValueAsString(planeID));
+                Plane plane = result.get();
+                return new CommandResult(ResponseStatus.OK, "Успех", new ObjectMapper().writeValueAsString(plane));
             } else {
                 return new CommandResult(ResponseStatus.ERROR, "Ошибка в получении самолёта", null);
             }

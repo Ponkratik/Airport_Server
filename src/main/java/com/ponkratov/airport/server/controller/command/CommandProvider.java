@@ -41,6 +41,9 @@ public class CommandProvider {
         commands.put(CommandType.UPDATEFLIGHT, new UpdateFlightCommand());
 
         commands.put(CommandType.FINDALLAIRPORTS, new FindAllAirportsCommand());
+
+        commands.put(CommandType.FINDTEAMBYFLIGHTID, new FindTeamByFlightIDCommand());
+        commands.put(CommandType.UPDATETEAM, new UpdateTeamCommand());
      }
 
     public static CommandProvider getInstance() {

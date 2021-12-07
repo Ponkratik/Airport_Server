@@ -27,7 +27,7 @@ public class UpdateFlightCommand implements ActionCommand {
         Timestamp arrTime = Timestamp.valueOf(params.get(RequestAttribute.ARRTIME));
         String IATACode = params.get(RequestAttribute.IATACODE);
         boolean isArrival = Boolean.parseBoolean(params.get(RequestAttribute.ISARRIVAL));
-        int planeID = Integer.parseInt(params.get(RequestAttribute.FLIGHTID));
+        int planeID = Integer.parseInt(params.get(RequestAttribute.PLANEID));
         int flightStatusID = Integer.parseInt(params.get(RequestAttribute.FLIGHTSTATUSID));
 
         Flight flight = new Flight.FlightBuilder()

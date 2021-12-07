@@ -96,7 +96,7 @@ public class FlightDaoImpl extends FlightDao {
 
                 Flight flight = new Flight.FlightBuilder()
                         .setFlightID(flightID)
-                        .setDepTime(arrTime)
+                        .setDepTime(depTime)
                         .setArrTime(arrTime)
                         .setIATACode(IATACode)
                         .setArrival(isArrival)
