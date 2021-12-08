@@ -329,3 +329,88 @@ java.nio.file.NoSuchFileException: \database.properties
 2021-12-07 23:12:15,294 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:1048 disconnected
 2021-12-07 23:12:19,419 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:1053 connected
 2021-12-07 23:12:31,152 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:1053 disconnected
+2021-12-08 17:30:02,595 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8284 connected
+2021-12-08 17:31:44,394 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8284 disconnected
+2021-12-08 18:01:39,069 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:8292 connected
+2021-12-08 18:07:20,430 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:8292 disconnected
+2021-12-08 18:38:25,325 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:8301 connected
+2021-12-08 18:38:31,095 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:8301 disconnected
+2021-12-08 18:38:36,234 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:8305 connected
+2021-12-08 18:40:28,602 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:8309 connected
+2021-12-08 18:43:14,810 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:8313 connected
+2021-12-08 18:43:28,439 ERROR c.p.a.s.c.u.UserThread [Thread-9] Can not read message from client.
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "isBlocked" (class com.ponkratov.airport.server.model.entity.User$UserBuilder), not marked as ignorable (9 known properties: "lastName", "userID", "login", "firstName", "email", "userPictureLink", "roleID", "surName", "blocked"])
+ at [Source: (String)"[{"userID":2,"login":"borisenko","email":"borisenko@airport.by","lastName":"Борисенко","firstName":"Александр","surName":"Игоревич","userPictureLink":null,"isBlocked":false,"roleID":4},{"userID":3,"login":"shpakovskij","email":"shpakovskij@airport.by","lastName":"Шпаковский","firstName":"Максим","surName":"Григорьевич","userPictureLink":null,"isBlocked":false,"roleID":5},{"userID":6,"login":"vorobei","email":"vorobei@airport.by","lastName":"Воробей","firstName":"Дарья","surName":"Антоновна","use"[truncated 49 chars]; line: 1, column: 173] (through reference chain: java.lang.Object[][0]->com.ponkratov.airport.server.model.entity.User$UserBuilder["isBlocked"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1127) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1989) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1700) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1678) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:214) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:24) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4675) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3630) ~[jackson-databind-2.13.0.jar:?]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3598) ~[jackson-databind-2.13.0.jar:?]
+	at com.ponkratov.airport.server.controller.command.impl.UpdateTeamCommand.execute(UpdateTeamCommand.java:28) ~[classes/:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:63) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2021-12-08 18:45:38,024 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8320 connected
+2021-12-08 18:47:16,228 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8331 connected
+2021-12-08 18:49:15,856 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8331 disconnected
+2021-12-08 19:55:32,438 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8345 connected
+2021-12-08 19:56:16,521 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8345 disconnected
+2021-12-08 19:56:18,244 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:8353 connected
+2021-12-08 20:04:38,180 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8360 connected
+2021-12-08 20:12:21,007 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8360 disconnected
+2021-12-08 20:13:44,217 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8371 connected
+2021-12-08 20:18:36,830 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8371 disconnected
+2021-12-08 20:42:52,118 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-08 20:43:02,789 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8406 connected
+2021-12-08 20:43:25,562 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:8406 disconnected
+2021-12-08 20:57:00,746 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:8410 connected
+2021-12-08 20:57:16,385 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:8410 disconnected
+2021-12-08 20:57:56,728 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:8414 connected
+2021-12-08 21:00:24,646 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:8414 disconnected
+2021-12-08 21:00:28,149 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:8418 connected
+2021-12-08 21:01:27,583 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:8418 disconnected
+2021-12-08 21:02:09,128 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:8422 connected
+2021-12-08 21:02:39,210 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:8422 disconnected
+2021-12-08 21:37:03,715 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:8429 connected
+2021-12-08 21:37:37,779 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:8429 disconnected
+2021-12-08 22:05:08,902 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:8434 connected
+2021-12-08 22:05:46,616 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:8434 disconnected
+2021-12-08 22:09:18,490 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:8438 connected
+2021-12-08 22:09:22,371 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:8438 disconnected
+2021-12-08 22:10:28,757 INFO c.p.a.s.c.u.UserThread [Thread-12] Client /127.0.0.1:8442 connected
+2021-12-08 22:10:43,646 INFO c.p.a.s.c.u.UserThread [Thread-12] Client /127.0.0.1:8442 disconnected
+2021-12-08 22:11:03,015 INFO c.p.a.s.c.u.UserThread [Thread-13] Client /127.0.0.1:8446 connected
+2021-12-08 22:11:34,846 INFO c.p.a.s.c.u.UserThread [Thread-13] Client /127.0.0.1:8446 disconnected
+2021-12-09 01:09:17,635 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 01:09:25,186 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1047 connected
+2021-12-09 01:09:52,861 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1047 disconnected
+2021-12-09 01:27:05,963 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1552 connected
+2021-12-09 01:27:15,669 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1552 disconnected
+2021-12-09 01:27:41,035 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1557 connected
+2021-12-09 01:27:46,439 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:1557 disconnected
+2021-12-09 01:28:12,552 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1562 connected
+2021-12-09 01:28:16,190 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:1562 disconnected
+2021-12-09 01:28:31,425 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:1567 connected
+2021-12-09 01:29:28,592 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 01:29:36,698 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1580 connected
+2021-12-09 01:30:27,264 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 01:31:16,967 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:17524 connected
+2021-12-09 01:31:27,621 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:17524 disconnected
+2021-12-09 01:32:28,166 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:21645 connected
+2021-12-09 01:32:31,890 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:21645 disconnected
+2021-12-09 01:32:41,197 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:21649 connected
+2021-12-09 01:33:47,945 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:21649 disconnected
+2021-12-09 01:33:57,497 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 01:34:03,886 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:21670 connected
+2021-12-09 01:39:18,843 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 01:39:48,937 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1059 connected
+2021-12-09 01:40:36,085 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1059 disconnected
+2021-12-09 01:41:19,544 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1065 connected
+2021-12-09 01:41:45,658 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1065 disconnected

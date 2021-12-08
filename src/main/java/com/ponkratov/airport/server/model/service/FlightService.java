@@ -16,4 +16,5 @@ public interface FlightService {
     public boolean updateStatus(int flightID, int newStatus) throws ServiceException;
     public boolean updateFlight(int flightID, Flight replacement) throws ServiceException;
     public boolean updatePlane(int flightID, int newPlane) throws ServiceException;
+    List<Flight> findFlightsByIdDate(int userID, String date) throws ServiceException;
 }

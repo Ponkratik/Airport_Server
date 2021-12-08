@@ -114,4 +114,16 @@ public class FlightServiceImpl implements FlightService {
             throw new ServiceException("Failed to update plane on flight, flightID = " + flightID, e);
         }
     }
+
+    @Override
+    public List<Flight> findFlightsByIdDate(int userID, String date) throws ServiceException {
+        FlightDao dao = new FlightDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            return dao.findFlightsByIdDate(userID, date);
+        } catch (DaoException e) {
+            LOG.error("Failed to find fights by userID, userID = " + userID, e);
+            throw new ServiceException("Failed to find fights by userID, userID = " + userID, e);
+        }
+    }
 }

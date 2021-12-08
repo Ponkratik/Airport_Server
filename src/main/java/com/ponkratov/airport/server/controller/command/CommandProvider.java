@@ -39,6 +39,7 @@ public class CommandProvider {
         commands.put(CommandType.FINDALLFLIGHTS, new FindAllFlightsCommand());
         commands.put(CommandType.FINDDEPARRFLIGHTS, new FindDepArrFlightsCommand());
         commands.put(CommandType.UPDATEFLIGHT, new UpdateFlightCommand());
+        commands.put(CommandType.FINDOWNFLIGHTS, new FindOwnFlightsByDateCommand());
 
         commands.put(CommandType.FINDALLAIRPORTS, new FindAllAirportsCommand());
 

@@ -67,6 +67,19 @@ public class FlightDaoImpl extends FlightDao {
             VALUES (?, ?, ?, ?, ?, ?);
             """;
 
+    private static final String SQL_FIND_BY_USERID = """
+            select flight.flightID,
+            depTime,
+            arrTime,
+            IATACode,
+            isArrival,
+            planeID,
+            flightStatusID
+            from team
+            left join flight on team.flightID = flight.flightID
+            where userID = ? and depTime regexp ?;
+            """;
+
     private static final String SQL_UPDATE_STATUS = """
             UPDATE flight
             SET flightStatusID = ?
@@ -132,7 +145,7 @@ public class FlightDaoImpl extends FlightDao {
 
                 Flight flight = new Flight.FlightBuilder()
                         .setFlightID(flightID)
-                        .setDepTime(arrTime)
+                        .setDepTime(depTime)
                         .setArrTime(arrTime)
                         .setIATACode(IATACode)
                         .setArrival(isArrival)
@@ -145,6 +158,43 @@ public class FlightDaoImpl extends FlightDao {
         } catch (SQLException e) {
             LOG.error("Failed to execute SQL_FIND_DEP_ARR", e);
             throw new DaoException("Failed to execute SQL_FIND_DEP_ARR", e);
+        }
+
+        return flights;
+    }
+
+    @Override
+    public List<Flight> findFlightsByIdDate(int userID, String date) throws DaoException {
+        List<Flight> flights = new ArrayList<>();
+
+        try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_BY_USERID)) {
+            statement.setInt(1, userID);
+            statement.setString(2, date);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                int flightID = resultSet.getInt(1);
+                Timestamp depTime = resultSet.getTimestamp(2);
+                Timestamp arrTime = resultSet.getTimestamp(3);
+                String IATACode = resultSet.getString(4);
+                boolean isArrival = resultSet.getBoolean(5);
+                int planeID = resultSet.getInt(6);
+                int flightStatusID = resultSet.getInt(7);
+
+                Flight flight = new Flight.FlightBuilder()
+                        .setFlightID(flightID)
+                        .setDepTime(depTime)
+                        .setArrTime(arrTime)
+                        .setIATACode(IATACode)
+                        .setArrival(isArrival)
+                        .setPlaneID(planeID)
+                        .setFlightStatusID(flightStatusID)
+                        .createFlight();
+
+                flights.add(flight);
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_FIND_BY_USER_ID, userID = " + userID, e);
+            throw new DaoException("Failed to execute SQL_FIND_BY_USER_ID, userID = " + userID, e);
         }
 
         return flights;

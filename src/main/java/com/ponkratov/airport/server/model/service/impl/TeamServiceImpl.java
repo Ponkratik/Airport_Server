@@ -51,7 +51,9 @@ public class TeamServiceImpl implements TeamService {
         TeamDao dao = new TeamDaoImpl();
         try (EntityTransaction transaction = new EntityTransaction()) {
             transaction.initAction(dao);
-            return dao.remove(flightID) && dao.createTeam(flightID, teamMembers);
+            boolean isRemoved = dao.remove(flightID);
+            boolean isCreated = dao.createTeam(flightID, teamMembers);
+            return  isCreated;
         } catch (DaoException e) {
             LOG.error("Failed to update team, fligthID = " + flightID, e);
             throw new ServiceException("Failed to update team, fligthID = " + flightID, e);

@@ -12,4 +12,5 @@ public abstract class FlightDao extends BaseDao<Integer, Flight> {
     public abstract boolean updatePlane(int flightID, int newPlane) throws DaoException;
     public abstract List<Flight> findAll() throws DaoException;
     public abstract List<Flight> findDepArrFlights(boolean isArr) throws DaoException;
+    public abstract List<Flight> findFlightsByIdDate(int userID, String date) throws DaoException;
 }
