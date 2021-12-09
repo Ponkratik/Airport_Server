@@ -579,3 +579,14 @@ Caused by: com.mysql.cj.exceptions.WrongArgumentException: SQL String cannot be 
 2021-12-09 23:17:07,555 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:13915 connected
 2021-12-09 23:17:26,365 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:13915 disconnected
 2021-12-09 23:17:29,069 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server stopped
+2021-12-09 23:33:41,283 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 23:33:48,549 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:24103 connected
+2021-12-09 23:33:55,506 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:24103 disconnected
+2021-12-09 23:37:56,895 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 23:38:04,375 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:15238 connected
+2021-12-09 23:38:12,077 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:15238 disconnected
+2021-12-09 23:38:17,153 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server stopped
+2021-12-09 23:50:01,192 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 23:50:06,971 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1058 connected
+2021-12-09 23:50:54,713 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1058 disconnected
+2021-12-09 23:50:58,457 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1067 connected

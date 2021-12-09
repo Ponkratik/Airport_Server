@@ -84,7 +84,6 @@ public class CustomConnectionPool {
         }
     }
 
-    //TODO: Сделать закрытие пула
     public void destroyPool() throws PoolException {
         for (int i = 0; i < DEFAULT_POOL_SIZE; i++) {
             try {

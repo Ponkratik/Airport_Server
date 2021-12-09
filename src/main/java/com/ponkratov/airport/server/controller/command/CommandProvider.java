@@ -9,6 +9,7 @@ public class CommandProvider {
     private final EnumMap<CommandType, ActionCommand> commands = new EnumMap<>(CommandType.class);
 
     private CommandProvider() {
+        commands.put(CommandType.LOGOUT, new LogoutCommand());
         commands.put(CommandType.AUTHENTICATE, new AuthenticateUserCommand());
         commands.put(CommandType.FINDALLUSERS, new FindAllUsersCommand());
         commands.put(CommandType.CHANGEPASSWORD, new ChangeUserPasswordCommand());

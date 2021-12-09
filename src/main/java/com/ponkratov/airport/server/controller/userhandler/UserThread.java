@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.net.SocketException;
 
 public class UserThread implements Runnable{
     private static final Logger LOG = LogManager.getLogger();
@@ -33,7 +32,7 @@ public class UserThread implements Runnable{
         return userID;
     }
 
-    public static void setUserID(int userID) {
+    public static void setUserID(Integer userID) {
         UserThread.userID = userID;
     }
 
@@ -41,7 +40,7 @@ public class UserThread implements Runnable{
         return roleID;
     }
 
-    public static void setRoleID(int roleID) {
+    public static void setRoleID(Integer roleID) {
         UserThread.roleID = roleID;
     }
 
