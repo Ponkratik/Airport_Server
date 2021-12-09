@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class FlightServiceImpl implements FlightService {
@@ -124,6 +125,18 @@ public class FlightServiceImpl implements FlightService {
         } catch (DaoException e) {
             LOG.error("Failed to find fights by userID, userID = " + userID, e);
             throw new ServiceException("Failed to find fights by userID, userID = " + userID, e);
+        }
+    }
+
+    @Override
+    public Map<String, Integer> countFightsAirports() throws ServiceException {
+        FlightDao dao = new FlightDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            return dao.countFightsAirports();
+        } catch (DaoException e) {
+            LOG.error("Failed to count fights by airports", e);
+            throw new ServiceException("Failed to count fights by airports", e);
         }
     }
 }

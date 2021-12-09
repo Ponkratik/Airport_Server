@@ -5,6 +5,7 @@ import com.ponkratov.airport.server.model.entity.Flight;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Map;
 
 public abstract class FlightDao extends BaseDao<Integer, Flight> {
     public abstract boolean create(Timestamp depTime, Timestamp arrTime, String IATACode, boolean isArrival, int planeID, int flightStatusID) throws DaoException;
@@ -13,4 +14,5 @@ public abstract class FlightDao extends BaseDao<Integer, Flight> {
     public abstract List<Flight> findAll() throws DaoException;
     public abstract List<Flight> findDepArrFlights(boolean isArr) throws DaoException;
     public abstract List<Flight> findFlightsByIdDate(int userID, String date) throws DaoException;
+    public abstract Map<String, Integer> countFightsAirports() throws DaoException;
 }

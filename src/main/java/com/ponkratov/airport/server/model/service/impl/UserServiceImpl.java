@@ -12,6 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class UserServiceImpl implements UserService {
@@ -225,6 +226,18 @@ public class UserServiceImpl implements UserService {
         } catch (DaoException e) {
             LOG.error("Failed to find all users by login.", e);
             throw new ServiceException("Failed to find all users by login.", e);
+        }
+    }
+
+    @Override
+    public Map<String, Integer> countUsersRoles() throws ServiceException {
+        UserDao dao = new UserDaoImpl();
+        try (EntityTransaction transaction = new EntityTransaction()) {
+            transaction.initAction(dao);
+            return dao.countUsersRoles();
+        } catch (DaoException e) {
+            LOG.error("Failed to count users for each role.", e);
+            throw new ServiceException("Failed to count users for each role.", e);
         }
     }
 }

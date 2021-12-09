@@ -4,6 +4,7 @@ import com.ponkratov.airport.server.exception.DaoException;
 import com.ponkratov.airport.server.model.entity.User;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public abstract class UserDao extends BaseDao<Integer, User> {
@@ -16,6 +17,8 @@ public abstract class UserDao extends BaseDao<Integer, User> {
     public abstract List<User> findByLoginRegexp(String regexp) throws DaoException;
 
     public abstract List<User> findByNameRegexp(String regexp) throws DaoException;
+
+    public abstract Map<String, Integer> countUsersRoles() throws DaoException;
 
     public abstract boolean create(String login, String password, String email, String lastName, String firstName, String surName, int roleID) throws DaoException;
 

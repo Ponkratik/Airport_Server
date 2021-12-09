@@ -5,6 +5,7 @@ import com.ponkratov.airport.server.exception.ServiceException;
 import com.ponkratov.airport.server.model.entity.User;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public interface UserService {
@@ -23,4 +24,5 @@ public interface UserService {
     List<User> findByRole(int roleID) throws ServiceException;
     List<User> findByLoginRegexp(String regexp) throws ServiceException;
     List<User> findByNameRegexp(String regexp) throws ServiceException;
+    Map<String, Integer> countUsersRoles() throws ServiceException;
 }

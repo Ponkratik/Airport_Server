@@ -19,6 +19,7 @@ public class CommandProvider {
         commands.put(CommandType.FINDUSERSBYLOGINREGEXP, new FindUsersByLoginRegexpCommand());
         commands.put(CommandType.FINDUSERSBYROLE, new FindUsersByRoleCommand());
         commands.put(CommandType.FINDUSERBYEMAIL, new FindUserByEmailCommand());
+        commands.put(CommandType.COUNTUSERSFOREACHROLE, new CountUsersForEachRoleCommand());
 
         commands.put(CommandType.FINDALLROLES, new FindAllRolesCommand());
         commands.put(CommandType.FINDROLEBYID, new FindRoleByIDCommand());
@@ -40,6 +41,7 @@ public class CommandProvider {
         commands.put(CommandType.FINDDEPARRFLIGHTS, new FindDepArrFlightsCommand());
         commands.put(CommandType.UPDATEFLIGHT, new UpdateFlightCommand());
         commands.put(CommandType.FINDOWNFLIGHTS, new FindOwnFlightsByDateCommand());
+        commands.put(CommandType.COUNTFLIGHTSFOREACHAIRPORT, new CountFlightsForEachAirportCommand());
 
         commands.put(CommandType.FINDALLAIRPORTS, new FindAllAirportsCommand());
 

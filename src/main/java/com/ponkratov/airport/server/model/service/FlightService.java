@@ -6,6 +6,7 @@ import com.ponkratov.airport.server.model.entity.User;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public interface FlightService {
@@ -17,4 +18,5 @@ public interface FlightService {
     public boolean updateFlight(int flightID, Flight replacement) throws ServiceException;
     public boolean updatePlane(int flightID, int newPlane) throws ServiceException;
     List<Flight> findFlightsByIdDate(int userID, String date) throws ServiceException;
+    Map<String, Integer> countFightsAirports() throws ServiceException;
 }

@@ -10,9 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class FlightDaoImpl extends FlightDao {
     private static final Logger LOG = LogManager.getLogger();
@@ -26,6 +24,12 @@ public class FlightDaoImpl extends FlightDao {
             planeID,
             flightStatusID
             FROM flight;
+            """;
+
+    private static final String SQL_COUNT_FLIGHTS_COUNTRY = """
+            SELECT IATACode, count(flightID)
+            FROM flight
+            GROUP BY flightID;
             """;
 
     private static final String SQL_FIND_DEP_ARR = """
@@ -198,6 +202,24 @@ public class FlightDaoImpl extends FlightDao {
         }
 
         return flights;
+    }
+
+    @Override
+    public Map<String, Integer> countFightsAirports() throws DaoException {
+        Map<String, Integer> result = new HashMap<>();
+        try (PreparedStatement statement = connection.prepareStatement(SQL_COUNT_FLIGHTS_COUNTRY)) {
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                String IATACode = resultSet.getString(1);
+                int flightsCount = resultSet.getInt(2);
+                result.put(IATACode, flightsCount);
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_COUNT_FLIGHTS_COUNTRY", e);
+            throw new DaoException("Failed to execute SQL_COUNT_FLIGHTS_COUNTRY", e);
+        }
+
+        return result;
     }
 
     @Override

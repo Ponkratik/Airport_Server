@@ -414,3 +414,168 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 2021-12-09 01:40:36,085 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1059 disconnected
 2021-12-09 01:41:19,544 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1065 connected
 2021-12-09 01:41:45,658 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1065 disconnected
+2021-12-09 18:46:39,901 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 18:46:46,302 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:14177 connected
+2021-12-09 18:47:18,378 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:14177 disconnected
+2021-12-09 18:51:48,690 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:22552 connected
+2021-12-09 18:51:54,459 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:22552 disconnected
+2021-12-09 18:52:14,136 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:13780 connected
+2021-12-09 18:52:23,641 INFO c.p.a.s.c.u.UserThread [Thread-6] Client /127.0.0.1:13780 disconnected
+2021-12-09 18:53:08,619 INFO c.p.a.s.c.u.UserThread [Thread-7] Client /127.0.0.1:13785 connected
+2021-12-09 18:54:05,709 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:13789 connected
+2021-12-09 18:54:54,135 INFO c.p.a.s.c.u.UserThread [Thread-8] Client /127.0.0.1:13789 disconnected
+2021-12-09 18:55:15,516 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:13794 connected
+2021-12-09 18:55:43,940 INFO c.p.a.s.c.u.UserThread [Thread-9] Client /127.0.0.1:13794 disconnected
+2021-12-09 19:08:48,758 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:1033 connected
+2021-12-09 19:09:55,930 INFO c.p.a.s.c.u.UserThread [Thread-10] Client /127.0.0.1:1033 disconnected
+2021-12-09 19:13:06,285 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:1036 connected
+2021-12-09 19:13:13,655 INFO c.p.a.s.c.u.UserThread [Thread-11] Client /127.0.0.1:1036 disconnected
+2021-12-09 19:13:42,719 INFO c.p.a.s.c.u.UserThread [Thread-12] Client /127.0.0.1:1041 connected
+2021-12-09 19:14:22,375 INFO c.p.a.s.c.u.UserThread [Thread-12] Client /127.0.0.1:1041 disconnected
+2021-12-09 20:32:38,050 INFO c.p.a.s.c.u.UserThread [Thread-13] Client /127.0.0.1:1039 connected
+2021-12-09 20:33:02,978 INFO c.p.a.s.c.u.UserThread [Thread-13] Client /127.0.0.1:1039 disconnected
+2021-12-09 20:33:07,458 INFO c.p.a.s.c.u.UserThread [Thread-14] Client /127.0.0.1:1047 connected
+2021-12-09 20:36:31,043 INFO c.p.a.s.c.u.UserThread [Thread-14] Client /127.0.0.1:1047 disconnected
+2021-12-09 20:40:24,913 INFO c.p.a.s.c.u.UserThread [Thread-15] Client /127.0.0.1:1031 connected
+2021-12-09 20:40:47,915 INFO c.p.a.s.c.u.UserThread [Thread-15] Client /127.0.0.1:1031 disconnected
+2021-12-09 20:40:51,600 INFO c.p.a.s.c.u.UserThread [Thread-16] Client /127.0.0.1:1035 connected
+2021-12-09 20:41:07,472 INFO c.p.a.s.c.u.UserThread [Thread-16] Client /127.0.0.1:1035 disconnected
+2021-12-09 20:41:18,727 INFO c.p.a.s.c.u.UserThread [Thread-17] Client /127.0.0.1:1042 connected
+2021-12-09 20:41:29,055 INFO c.p.a.s.c.u.UserThread [Thread-17] Client /127.0.0.1:1042 disconnected
+2021-12-09 20:48:01,494 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 20:48:11,203 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1087 connected
+2021-12-09 20:48:50,204 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1087 disconnected
+2021-12-09 20:48:58,361 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1091 connected
+2021-12-09 20:49:16,375 INFO c.p.a.s.c.u.UserThread [Thread-5] Client /127.0.0.1:1091 disconnected
+2021-12-09 20:49:32,669 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server stopped
+2021-12-09 22:32:39,038 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 22:32:49,063 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1045 connected
+2021-12-09 22:40:09,021 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1045 disconnected
+2021-12-09 22:53:05,286 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 22:53:10,960 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1073 connected
+2021-12-09 22:53:23,860 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:1073 disconnected
+2021-12-09 23:01:21,922 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server stopped
+2021-12-09 23:14:59,256 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 23:15:10,510 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:11313 connected
+2021-12-09 23:15:23,807 ERROR c.p.a.s.m.d.i.FlightDaoImpl [Thread-4] Failed to execute SQL_COUNT_FLIGHTS_COUNTRY
+java.sql.SQLException: SQL String cannot be empty
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:85) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:219) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:193) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getInstance(ClientPreparedStatement.java:134) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.clientPrepareStatement(ConnectionImpl.java:670) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1644) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1564) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.ponkratov.airport.server.model.pool.ProxyConnection.prepareStatement(ProxyConnection.java:22) ~[classes/:?]
+	at com.ponkratov.airport.server.model.dao.impl.FlightDaoImpl.countFightsAirports(FlightDaoImpl.java:207) [classes/:?]
+	at com.ponkratov.airport.server.model.service.impl.FlightServiceImpl.countFightsAirports(FlightServiceImpl.java:136) [classes/:?]
+	at com.ponkratov.airport.server.controller.command.impl.CountFlightsForEachAirportCommand.execute(CountFlightsForEachAirportCommand.java:26) [classes/:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:63) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: SQL String cannot be empty
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.AbstractPreparedQuery.checkNullOrEmptyQuery(AbstractPreparedQuery.java:165) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:215) ~[mysql-connector-java-8.0.27.jar:?]
+	... 11 more
+2021-12-09 23:15:23,812 ERROR c.p.a.s.m.s.i.FlightServiceImpl [Thread-4] Failed to count fights by airports
+com.ponkratov.airport.server.exception.DaoException: Failed to execute SQL_COUNT_FLIGHTS_COUNTRY
+	at com.ponkratov.airport.server.model.dao.impl.FlightDaoImpl.countFightsAirports(FlightDaoImpl.java:216) ~[classes/:?]
+	at com.ponkratov.airport.server.model.service.impl.FlightServiceImpl.countFightsAirports(FlightServiceImpl.java:136) [classes/:?]
+	at com.ponkratov.airport.server.controller.command.impl.CountFlightsForEachAirportCommand.execute(CountFlightsForEachAirportCommand.java:26) [classes/:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:63) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.sql.SQLException: SQL String cannot be empty
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:85) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:219) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:193) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getInstance(ClientPreparedStatement.java:134) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.clientPrepareStatement(ConnectionImpl.java:670) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1644) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1564) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.ponkratov.airport.server.model.pool.ProxyConnection.prepareStatement(ProxyConnection.java:22) ~[classes/:?]
+	at com.ponkratov.airport.server.model.dao.impl.FlightDaoImpl.countFightsAirports(FlightDaoImpl.java:207) ~[classes/:?]
+	... 4 more
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: SQL String cannot be empty
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.AbstractPreparedQuery.checkNullOrEmptyQuery(AbstractPreparedQuery.java:165) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:215) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:193) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getInstance(ClientPreparedStatement.java:134) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.clientPrepareStatement(ConnectionImpl.java:670) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1644) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1564) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.ponkratov.airport.server.model.pool.ProxyConnection.prepareStatement(ProxyConnection.java:22) ~[classes/:?]
+	at com.ponkratov.airport.server.model.dao.impl.FlightDaoImpl.countFightsAirports(FlightDaoImpl.java:207) ~[classes/:?]
+	... 4 more
+2021-12-09 23:15:23,813 ERROR c.p.a.s.c.c.i.CountFlightsForEachAirportCommand [Thread-4] Failed to execute CountFlightsForEachAirportCommand
+com.ponkratov.airport.server.exception.ServiceException: Failed to count fights by airports
+	at com.ponkratov.airport.server.model.service.impl.FlightServiceImpl.countFightsAirports(FlightServiceImpl.java:139) ~[classes/:?]
+	at com.ponkratov.airport.server.controller.command.impl.CountFlightsForEachAirportCommand.execute(CountFlightsForEachAirportCommand.java:26) [classes/:?]
+	at com.ponkratov.airport.server.controller.userhandler.UserThread.run(UserThread.java:63) [classes/:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: com.ponkratov.airport.server.exception.DaoException: Failed to execute SQL_COUNT_FLIGHTS_COUNTRY
+	at com.ponkratov.airport.server.model.dao.impl.FlightDaoImpl.countFightsAirports(FlightDaoImpl.java:216) ~[classes/:?]
+	at com.ponkratov.airport.server.model.service.impl.FlightServiceImpl.countFightsAirports(FlightServiceImpl.java:136) ~[classes/:?]
+	... 3 more
+Caused by: java.sql.SQLException: SQL String cannot be empty
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:85) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:219) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:193) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getInstance(ClientPreparedStatement.java:134) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.clientPrepareStatement(ConnectionImpl.java:670) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1644) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1564) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.ponkratov.airport.server.model.pool.ProxyConnection.prepareStatement(ProxyConnection.java:22) ~[classes/:?]
+	at com.ponkratov.airport.server.model.dao.impl.FlightDaoImpl.countFightsAirports(FlightDaoImpl.java:207) ~[classes/:?]
+	at com.ponkratov.airport.server.model.service.impl.FlightServiceImpl.countFightsAirports(FlightServiceImpl.java:136) ~[classes/:?]
+	... 3 more
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: SQL String cannot be empty
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.AbstractPreparedQuery.checkNullOrEmptyQuery(AbstractPreparedQuery.java:165) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:215) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.<init>(ClientPreparedStatement.java:193) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getInstance(ClientPreparedStatement.java:134) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.clientPrepareStatement(ConnectionImpl.java:670) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1644) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1564) ~[mysql-connector-java-8.0.27.jar:?]
+	at com.ponkratov.airport.server.model.pool.ProxyConnection.prepareStatement(ProxyConnection.java:22) ~[classes/:?]
+	at com.ponkratov.airport.server.model.dao.impl.FlightDaoImpl.countFightsAirports(FlightDaoImpl.java:207) ~[classes/:?]
+	at com.ponkratov.airport.server.model.service.impl.FlightServiceImpl.countFightsAirports(FlightServiceImpl.java:136) ~[classes/:?]
+	... 3 more
+2021-12-09 23:16:55,127 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server started
+2021-12-09 23:17:07,555 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:13915 connected
+2021-12-09 23:17:26,365 INFO c.p.a.s.c.u.UserThread [Thread-4] Client /127.0.0.1:13915 disconnected
+2021-12-09 23:17:29,069 INFO c.p.a.s.v.ServerController [JavaFX Application Thread] Server stopped

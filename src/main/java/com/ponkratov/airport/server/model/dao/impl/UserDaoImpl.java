@@ -9,9 +9,7 @@ import org.apache.logging.log4j.Logger;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class UserDaoImpl extends UserDao {
     private static final Logger LOG = LogManager.getLogger();
@@ -100,6 +98,13 @@ public class UserDaoImpl extends UserDao {
             isBlocked
             FROM user
             WHERE user.roleID = ?;
+            """;
+
+    private static final String SQL_USERS_ROLES_COUNT = """
+            SELECT roleName, count(userID)
+            FROM user
+            INNER JOIN role r on user.roleID = r.roleID
+            GROUP BY user.roleID;
             """;
 
     private static final String SQL_CREATE_USER = """
@@ -443,6 +448,24 @@ public class UserDaoImpl extends UserDao {
         }
 
         return users;
+    }
+
+    @Override
+    public Map<String, Integer> countUsersRoles() throws DaoException {
+        Map<String, Integer> result = new HashMap<>();
+        try (PreparedStatement statement = connection.prepareStatement(SQL_USERS_ROLES_COUNT)) {
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                String roleName = resultSet.getString(1);
+                int usersCount = resultSet.getInt(2);
+                result.put(roleName, usersCount);
+            }
+        } catch (SQLException e) {
+            LOG.error("Failed to execute SQL_USERS_ROLES_COUNT", e);
+            throw new DaoException("Failed to execute SQL_USERS_ROLES_COUNT", e);
+        }
+
+        return result;
     }
 
     @Override
