@@ -13,6 +13,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Map;
+import java.util.Optional;
 
 public class UpdateUserCommand implements ActionCommand {
     private static final Logger LOG = LogManager.getLogger();
@@ -38,11 +39,21 @@ public class UpdateUserCommand implements ActionCommand {
                 .createUser();
         UserService service = UserServiceImpl.getInstance();
         try {
-            boolean isExecuted = service.updateUser(userID, user);
-            if (isExecuted) {
-                return new CommandResult(ResponseStatus.OK, "Данные пользователя обновлены", null);
+            Optional<User> queryResult = service.findByLogin(userLogin);
+            if (queryResult.isPresent()) {
+                return new CommandResult(ResponseStatus.ERROR, "Пользователь с таким логином уже существует", null);
             } else {
-                return new CommandResult(ResponseStatus.ERROR, "Не удалось обновить данные пользователя", null);
+                Optional<User> queryResult1 = service.findByEmail(userEmail);
+                if (queryResult1.isPresent()) {
+                    return new CommandResult(ResponseStatus.ERROR, "Пользователь с таким эл.адресом уже существует", null);
+                } else {
+                    boolean isExecuted = service.updateUser(userID, user);
+                    if (isExecuted) {
+                        return new CommandResult(ResponseStatus.OK, "Данные пользователя обновлены", null);
+                    } else {
+                        return new CommandResult(ResponseStatus.ERROR, "Не удалось обновить данные пользователя", null);
+                    }
+                }
             }
         } catch (ServiceException e) {
             LOG.error("Failed to update user, userID = " + userID, e);

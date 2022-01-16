@@ -53,6 +53,8 @@ public class User implements Entity{
         return userPictureLink;
     }
 
+    public boolean getIsBlocked() { return isBlocked; }
+
     public boolean isBlocked() {
         return isBlocked;
     }
@@ -134,6 +136,11 @@ public class User implements Entity{
 
         public UserBuilder setBlocked(boolean blocked) {
             this.isBlocked = blocked;
+            return this;
+        }
+
+        public UserBuilder setIsBlocked(boolean isBlocked) {
+            this.isBlocked = isBlocked;
             return this;
         }
 

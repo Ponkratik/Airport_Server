@@ -10,6 +10,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class FlightDaoImpl extends FlightDao {
@@ -41,7 +43,8 @@ public class FlightDaoImpl extends FlightDao {
             planeID,
             flightStatusID
             FROM flight
-            WHERE isArrival = ?;
+            WHERE isArrival = ? AND
+            depTime regexp ?;
             """;
 
     private static final String SQL_FIND_ID = """
@@ -137,6 +140,7 @@ public class FlightDaoImpl extends FlightDao {
 
         try (PreparedStatement statement = connection.prepareStatement(SQL_FIND_DEP_ARR)) {
             statement.setBoolean(1, isArr);
+            statement.setString(2, LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 int flightID = resultSet.getInt(1);
